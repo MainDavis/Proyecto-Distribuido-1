@@ -1,22 +1,22 @@
 [
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrix.dir/multMatrix/multmatrix.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrix1.dir/multMatrix/multmatrix.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp"
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrix.dir/multMatrix/main_multMatrix.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/main_multMatrix.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrix1.dir/multMatrix/main_multMatrix.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/main_multMatrix.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/main_multMatrix.cpp"
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManager.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManager1.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp"
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManager.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManager1.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp"
 }
 ]

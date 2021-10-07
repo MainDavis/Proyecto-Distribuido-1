@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/main_multMatrix.cpp" "/home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/multMatrix.dir/multMatrix/main_multMatrix.cpp.o"
-  "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp" "/home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/multMatrix.dir/multMatrix/multmatrix.cpp.o"
+  "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp" "/home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/fileManager1.dir/fileManager/filemanager.cpp.o"
+  "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp" "/home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/fileManager1.dir/fileManager/main_fm.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

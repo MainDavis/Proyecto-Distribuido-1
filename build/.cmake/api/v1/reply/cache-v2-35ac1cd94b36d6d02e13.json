@@ -719,7 +719,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "multMatrix"
+			"value" : "multMatrix1"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1002,7 +1002,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "fileManager_BINARY_DIR",
+			"name" : "fileManager1_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1014,7 +1014,7 @@
 			"value" : "/home/davis/Escritorio/PSDI-PRACTICA-1/build"
 		},
 		{
-			"name" : "fileManager_SOURCE_DIR",
+			"name" : "fileManager1_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1026,7 +1026,7 @@
 			"value" : "/home/davis/Escritorio/PSDI-PRACTICA-1"
 		},
 		{
-			"name" : "multMatrix_BINARY_DIR",
+			"name" : "multMatrix1_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1038,7 +1038,7 @@
 			"value" : "/home/davis/Escritorio/PSDI-PRACTICA-1/build"
 		},
 		{
-			"name" : "multMatrix_SOURCE_DIR",
+			"name" : "multMatrix1_SOURCE_DIR",
 			"properties" : 
 			[
 				{
