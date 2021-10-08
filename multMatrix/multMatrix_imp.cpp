@@ -62,6 +62,11 @@ void multmatrix_imp::exec(){
 
 
                     //LIBERAR MEMORIA!!!!!!!!
+<<<<<<< Updated upstream
+=======
+                    delete fichNombre_leer;
+                    delete datosLeidos;
+>>>>>>> Stashed changes
 
                 }
                 break;
@@ -70,12 +75,36 @@ void multmatrix_imp::exec(){
                 {
                     char* fichNombre_escribir=nullptr;
                     int* fichSize=0;
+<<<<<<< Updated upstream
                     char* datosLeidos=nullptr;
 
                     //RECIBIR MATRIZ ALMACENADA EN MATRIX_T
 
 
                     //ESCRIBIR LA MATRIX DE MATRIX_T EN EL FICHERO
+=======
+                    matrix_t* m = new matrix_t;
+                    char* datosEscritos = nullptr
+
+                    //RECIBIR MATRIZ ALMACENADA EN MATRIX_T
+                    recvMSG(clientID,(void**)&fichNombre_escribir,&dataLen);
+
+					recvMSG(clientID,(void**)&msg,&dataLen);
+					memcpy(matrix_t->rows,msg,sizeof(int));            //ROWS
+					delete msg;
+
+					recvMSG(clientID,(void**)&msg,&dataLen);
+					memcpy(&matrix_t->cols,msg,sizeof(int));            //COLS
+					delete msg;
+
+                    recvMSG(clientID,(void**)&m->data,&dataLen)         //DATOS
+
+
+                    //ESCRIBIR LA MATRIX DE MATRIX_T EN EL FICHERO
+                    ops->writeMatrix(,fichNombre_escribir);
+
+
+>>>>>>> Stashed changes
 
                 }
                 break;
