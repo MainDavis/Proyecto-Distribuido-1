@@ -719,7 +719,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "multMatrixExec"
+			"value" : "multMatrixEXEC"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1026,6 +1026,30 @@
 			"value" : "/home/davis/Escritorio/PSDI-PRACTICA-1"
 		},
 		{
+			"name" : "fileManagerEXEC_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/davis/Escritorio/PSDI-PRACTICA-1/build"
+		},
+		{
+			"name" : "fileManagerEXEC_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/davis/Escritorio/PSDI-PRACTICA-1"
+		},
+		{
 			"name" : "fileManagerExec_BINARY_DIR",
 			"properties" : 
 			[
@@ -1063,6 +1087,30 @@
 		},
 		{
 			"name" : "multMatrix1_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/davis/Escritorio/PSDI-PRACTICA-1"
+		},
+		{
+			"name" : "multMatrixEXEC_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/davis/Escritorio/PSDI-PRACTICA-1/build"
+		},
+		{
+			"name" : "multMatrixEXEC_SOURCE_DIR",
 			"properties" : 
 			[
 				{

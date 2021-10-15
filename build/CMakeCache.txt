@@ -121,7 +121,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=multMatrixExec
+CMAKE_PROJECT_NAME:STATIC=multMatrixEXEC
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/bin/x86_64-linux-gnu-ranlib
@@ -192,6 +192,12 @@ fileManager1_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
 fileManager1_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
 
 //Value Computed by CMake
+fileManagerEXEC_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
+
+//Value Computed by CMake
+fileManagerEXEC_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
+
+//Value Computed by CMake
 fileManagerExec_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
 
 //Value Computed by CMake
@@ -202,6 +208,12 @@ multMatrix1_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
 
 //Value Computed by CMake
 multMatrix1_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
+
+//Value Computed by CMake
+multMatrixEXEC_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
+
+//Value Computed by CMake
+multMatrixEXEC_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
 
 //Value Computed by CMake
 multMatrixExec_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build

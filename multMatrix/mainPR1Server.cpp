@@ -1,4 +1,4 @@
-#include "multMatrix_imp.h"
+#include "multmatrix_imp.h"
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
@@ -27,7 +27,7 @@ int main(int argc,char** argv){
 		if(checkNewConnections()){
 		
 			int clientID=getNewConnection();	
-			std::thread* newThread=new std::thread(threadClient,clientID);
+			std::thread* newThread=new std::thread(threadclient,clientID);
 			newThread->detach();
 		}
 	}

@@ -1,6 +1,8 @@
 #pragma once
 //linka con el server, reproduce la clase base
 
+#include "multmatrix.h"
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>

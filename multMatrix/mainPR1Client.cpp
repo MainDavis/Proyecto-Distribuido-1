@@ -12,7 +12,7 @@ void freeMatrix(matrix_t* m){
 }
 int main()
 {
-    multMatrix_stub* mmatrix=new multmatrix_stub();
+    multmatrix_stub* mmatrix=new multmatrix_stub();
 
 
     matrix_t* m1= mmatrix->createRandMatrix(5,5);

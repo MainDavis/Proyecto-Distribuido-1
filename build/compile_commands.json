@@ -1,22 +1,47 @@
 [
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixExec.dir/multMatrix/multmatrix.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp"
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixExec.dir/multMatrix/main_multMatrix.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/main_multMatrix.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixEXEC.dir/multMatrix/main_multMatrix.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/main_multMatrix.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/main_multMatrix.cpp"
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerExec.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixEXEC.dir/multMatrix/mainPR1Server.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/mainPR1Server.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/mainPR1Server.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixEXEC.dir/multMatrix/mainPR1Client.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/mainPR1Client.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/mainPR1Client.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_imp.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_stub.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_stub.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_stub.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixEXEC.dir/multMatrix/utils.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/utils.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/utils.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerEXEC.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp"
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerExec.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerEXEC.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp"
 }
 ]

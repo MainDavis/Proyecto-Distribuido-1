@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManagerExec"
+			"path" : "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManagerEXEC"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "fileManagerExec::@6890427a1f51a3e7e1df",
+	"id" : "fileManagerEXEC::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -77,8 +77,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "fileManagerExec",
-	"nameOnDisk" : "fileManagerExec",
+	"name" : "fileManagerEXEC",
+	"nameOnDisk" : "fileManagerEXEC",
 	"paths" : 
 	{
 		"build" : ".",
