@@ -10,5 +10,7 @@ add_executable(fileManager1 fileManager/filemanager.cpp fileManager/filemanager.
 target_link_libraries(fileManager1 pthread)
 
 project(multMatrix1 LANGUAGES CXX)
-add_executable(multMatrix1 multMatrix/multmatrix.cpp multMatrix/multmatrix.h multMatrix/main_multMatrix.cpp)
+add_executable(multMatrix1 multMatrix/multmatrix.cpp multMatrix/multmatrix.h multMatrix/main_multMatrix.cpp multMatrix/mainPR1Server.cpp 
+    multMatrix/mainPR1Client.cpp multMatrix/multmatrix_imp.cpp multMatrix/multmatrix_imp.h multMatrix/stub.cpp multMatrix/multmatrix_stub.h
+    multMatrix/utils.cpp multMatrix/utils.h)
 target_link_libraries(multMatrix1 pthread)
