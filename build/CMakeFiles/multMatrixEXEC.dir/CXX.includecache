@@ -8,11 +8,13 @@
 
 /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 
-/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.cpp
-multmatrix_imp.h
-/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.h
+/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_stub.cpp
+multmatrix_stub.h
+/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_stub.h
 
-/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.h
+/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_stub.h
+multmatrix.h
+/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 iostream
 -
 stdio.h
@@ -21,8 +23,6 @@ stdlib.h
 -
 utils.h
 /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/utils.h
-multmatrix.h
-/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 
 /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/utils.h
 sys/types.h

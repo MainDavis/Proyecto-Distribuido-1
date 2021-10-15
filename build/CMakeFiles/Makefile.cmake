@@ -41,6 +41,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/multMatrixEXEC.dir/DependInfo.cmake"
-  "CMakeFiles/fileManagerEXEC.dir/DependInfo.cmake"
+  "CMakeFiles/multMatrixServer.dir/DependInfo.cmake"
+  "CMakeFiles/multMatrixClient.dir/DependInfo.cmake"
+  "CMakeFiles/fileManagerServer.dir/DependInfo.cmake"
+  "CMakeFiles/fileManagerClient.dir/DependInfo.cmake"
   )

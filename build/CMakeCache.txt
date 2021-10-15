@@ -121,7 +121,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=multMatrixEXEC
+CMAKE_PROJECT_NAME:STATIC=multMatrixServer
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/bin/x86_64-linux-gnu-ranlib
@@ -192,6 +192,12 @@ fileManager1_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
 fileManager1_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
 
 //Value Computed by CMake
+fileManagerClient_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
+
+//Value Computed by CMake
+fileManagerClient_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
+
+//Value Computed by CMake
 fileManagerEXEC_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
 
 //Value Computed by CMake
@@ -204,10 +210,22 @@ fileManagerExec_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
 fileManagerExec_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
 
 //Value Computed by CMake
+fileManagerServer_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
+
+//Value Computed by CMake
+fileManagerServer_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
+
+//Value Computed by CMake
 multMatrix1_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
 
 //Value Computed by CMake
 multMatrix1_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
+
+//Value Computed by CMake
+multMatrixClient_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
+
+//Value Computed by CMake
+multMatrixClient_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
 
 //Value Computed by CMake
 multMatrixEXEC_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
@@ -220,6 +238,12 @@ multMatrixExec_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
 
 //Value Computed by CMake
 multMatrixExec_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
+
+//Value Computed by CMake
+multMatrixServer_BINARY_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1/build
+
+//Value Computed by CMake
+multMatrixServer_SOURCE_DIR:STATIC=/home/davis/Escritorio/PSDI-PRACTICA-1
 
 
 ########################

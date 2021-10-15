@@ -130,30 +130,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named multMatrixEXEC
+# Target rules for targets named multMatrixServer
 
 # Build rule for target.
-multMatrixEXEC: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multMatrixEXEC
-.PHONY : multMatrixEXEC
+multMatrixServer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multMatrixServer
+.PHONY : multMatrixServer
 
 # fast build rule for target.
-multMatrixEXEC/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/build
-.PHONY : multMatrixEXEC/fast
+multMatrixServer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/build
+.PHONY : multMatrixServer/fast
 
 #=============================================================================
-# Target rules for targets named fileManagerEXEC
+# Target rules for targets named multMatrixClient
 
 # Build rule for target.
-fileManagerEXEC: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fileManagerEXEC
-.PHONY : fileManagerEXEC
+multMatrixClient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multMatrixClient
+.PHONY : multMatrixClient
 
 # fast build rule for target.
-fileManagerEXEC/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerEXEC.dir/build.make CMakeFiles/fileManagerEXEC.dir/build
-.PHONY : fileManagerEXEC/fast
+multMatrixClient/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/build
+.PHONY : multMatrixClient/fast
+
+#=============================================================================
+# Target rules for targets named fileManagerServer
+
+# Build rule for target.
+fileManagerServer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fileManagerServer
+.PHONY : fileManagerServer
+
+# fast build rule for target.
+fileManagerServer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/build
+.PHONY : fileManagerServer/fast
+
+#=============================================================================
+# Target rules for targets named fileManagerClient
+
+# Build rule for target.
+fileManagerClient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fileManagerClient
+.PHONY : fileManagerClient
+
+# fast build rule for target.
+fileManagerClient/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/build
+.PHONY : fileManagerClient/fast
 
 fileManager/filemanager.o: fileManager/filemanager.cpp.o
 
@@ -161,7 +187,8 @@ fileManager/filemanager.o: fileManager/filemanager.cpp.o
 
 # target to build an object file
 fileManager/filemanager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerEXEC.dir/build.make CMakeFiles/fileManagerEXEC.dir/fileManager/filemanager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o
 .PHONY : fileManager/filemanager.cpp.o
 
 fileManager/filemanager.i: fileManager/filemanager.cpp.i
@@ -170,7 +197,8 @@ fileManager/filemanager.i: fileManager/filemanager.cpp.i
 
 # target to preprocess a source file
 fileManager/filemanager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerEXEC.dir/build.make CMakeFiles/fileManagerEXEC.dir/fileManager/filemanager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.i
 .PHONY : fileManager/filemanager.cpp.i
 
 fileManager/filemanager.s: fileManager/filemanager.cpp.s
@@ -179,7 +207,8 @@ fileManager/filemanager.s: fileManager/filemanager.cpp.s
 
 # target to generate assembly for a file
 fileManager/filemanager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerEXEC.dir/build.make CMakeFiles/fileManagerEXEC.dir/fileManager/filemanager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.s
 .PHONY : fileManager/filemanager.cpp.s
 
 fileManager/main_fm.o: fileManager/main_fm.cpp.o
@@ -188,7 +217,8 @@ fileManager/main_fm.o: fileManager/main_fm.cpp.o
 
 # target to build an object file
 fileManager/main_fm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerEXEC.dir/build.make CMakeFiles/fileManagerEXEC.dir/fileManager/main_fm.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o
 .PHONY : fileManager/main_fm.cpp.o
 
 fileManager/main_fm.i: fileManager/main_fm.cpp.i
@@ -197,7 +227,8 @@ fileManager/main_fm.i: fileManager/main_fm.cpp.i
 
 # target to preprocess a source file
 fileManager/main_fm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerEXEC.dir/build.make CMakeFiles/fileManagerEXEC.dir/fileManager/main_fm.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.i
 .PHONY : fileManager/main_fm.cpp.i
 
 fileManager/main_fm.s: fileManager/main_fm.cpp.s
@@ -206,7 +237,8 @@ fileManager/main_fm.s: fileManager/main_fm.cpp.s
 
 # target to generate assembly for a file
 fileManager/main_fm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerEXEC.dir/build.make CMakeFiles/fileManagerEXEC.dir/fileManager/main_fm.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.s
 .PHONY : fileManager/main_fm.cpp.s
 
 multMatrix/mainPR1Client.o: multMatrix/mainPR1Client.cpp.o
@@ -215,7 +247,7 @@ multMatrix/mainPR1Client.o: multMatrix/mainPR1Client.cpp.o
 
 # target to build an object file
 multMatrix/mainPR1Client.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/mainPR1Client.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/mainPR1Client.cpp.o
 .PHONY : multMatrix/mainPR1Client.cpp.o
 
 multMatrix/mainPR1Client.i: multMatrix/mainPR1Client.cpp.i
@@ -224,7 +256,7 @@ multMatrix/mainPR1Client.i: multMatrix/mainPR1Client.cpp.i
 
 # target to preprocess a source file
 multMatrix/mainPR1Client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/mainPR1Client.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/mainPR1Client.cpp.i
 .PHONY : multMatrix/mainPR1Client.cpp.i
 
 multMatrix/mainPR1Client.s: multMatrix/mainPR1Client.cpp.s
@@ -233,7 +265,7 @@ multMatrix/mainPR1Client.s: multMatrix/mainPR1Client.cpp.s
 
 # target to generate assembly for a file
 multMatrix/mainPR1Client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/mainPR1Client.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/mainPR1Client.cpp.s
 .PHONY : multMatrix/mainPR1Client.cpp.s
 
 multMatrix/mainPR1Server.o: multMatrix/mainPR1Server.cpp.o
@@ -242,7 +274,7 @@ multMatrix/mainPR1Server.o: multMatrix/mainPR1Server.cpp.o
 
 # target to build an object file
 multMatrix/mainPR1Server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/mainPR1Server.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/mainPR1Server.cpp.o
 .PHONY : multMatrix/mainPR1Server.cpp.o
 
 multMatrix/mainPR1Server.i: multMatrix/mainPR1Server.cpp.i
@@ -251,7 +283,7 @@ multMatrix/mainPR1Server.i: multMatrix/mainPR1Server.cpp.i
 
 # target to preprocess a source file
 multMatrix/mainPR1Server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/mainPR1Server.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/mainPR1Server.cpp.i
 .PHONY : multMatrix/mainPR1Server.cpp.i
 
 multMatrix/mainPR1Server.s: multMatrix/mainPR1Server.cpp.s
@@ -260,35 +292,8 @@ multMatrix/mainPR1Server.s: multMatrix/mainPR1Server.cpp.s
 
 # target to generate assembly for a file
 multMatrix/mainPR1Server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/mainPR1Server.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/mainPR1Server.cpp.s
 .PHONY : multMatrix/mainPR1Server.cpp.s
-
-multMatrix/main_multMatrix.o: multMatrix/main_multMatrix.cpp.o
-
-.PHONY : multMatrix/main_multMatrix.o
-
-# target to build an object file
-multMatrix/main_multMatrix.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/main_multMatrix.cpp.o
-.PHONY : multMatrix/main_multMatrix.cpp.o
-
-multMatrix/main_multMatrix.i: multMatrix/main_multMatrix.cpp.i
-
-.PHONY : multMatrix/main_multMatrix.i
-
-# target to preprocess a source file
-multMatrix/main_multMatrix.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/main_multMatrix.cpp.i
-.PHONY : multMatrix/main_multMatrix.cpp.i
-
-multMatrix/main_multMatrix.s: multMatrix/main_multMatrix.cpp.s
-
-.PHONY : multMatrix/main_multMatrix.s
-
-# target to generate assembly for a file
-multMatrix/main_multMatrix.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/main_multMatrix.cpp.s
-.PHONY : multMatrix/main_multMatrix.cpp.s
 
 multMatrix/multmatrix.o: multMatrix/multmatrix.cpp.o
 
@@ -296,7 +301,8 @@ multMatrix/multmatrix.o: multMatrix/multmatrix.cpp.o
 
 # target to build an object file
 multMatrix/multmatrix.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/multmatrix.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/multmatrix.cpp.o
 .PHONY : multMatrix/multmatrix.cpp.o
 
 multMatrix/multmatrix.i: multMatrix/multmatrix.cpp.i
@@ -305,7 +311,8 @@ multMatrix/multmatrix.i: multMatrix/multmatrix.cpp.i
 
 # target to preprocess a source file
 multMatrix/multmatrix.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/multmatrix.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/multmatrix.cpp.i
 .PHONY : multMatrix/multmatrix.cpp.i
 
 multMatrix/multmatrix.s: multMatrix/multmatrix.cpp.s
@@ -314,7 +321,8 @@ multMatrix/multmatrix.s: multMatrix/multmatrix.cpp.s
 
 # target to generate assembly for a file
 multMatrix/multmatrix.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/multmatrix.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/multmatrix.cpp.s
 .PHONY : multMatrix/multmatrix.cpp.s
 
 multMatrix/multmatrix_imp.o: multMatrix/multmatrix_imp.cpp.o
@@ -323,7 +331,7 @@ multMatrix/multmatrix_imp.o: multMatrix/multmatrix_imp.cpp.o
 
 # target to build an object file
 multMatrix/multmatrix_imp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_imp.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/multmatrix_imp.cpp.o
 .PHONY : multMatrix/multmatrix_imp.cpp.o
 
 multMatrix/multmatrix_imp.i: multMatrix/multmatrix_imp.cpp.i
@@ -332,7 +340,7 @@ multMatrix/multmatrix_imp.i: multMatrix/multmatrix_imp.cpp.i
 
 # target to preprocess a source file
 multMatrix/multmatrix_imp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_imp.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/multmatrix_imp.cpp.i
 .PHONY : multMatrix/multmatrix_imp.cpp.i
 
 multMatrix/multmatrix_imp.s: multMatrix/multmatrix_imp.cpp.s
@@ -341,7 +349,7 @@ multMatrix/multmatrix_imp.s: multMatrix/multmatrix_imp.cpp.s
 
 # target to generate assembly for a file
 multMatrix/multmatrix_imp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_imp.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/multmatrix_imp.cpp.s
 .PHONY : multMatrix/multmatrix_imp.cpp.s
 
 multMatrix/multmatrix_stub.o: multMatrix/multmatrix_stub.cpp.o
@@ -350,7 +358,7 @@ multMatrix/multmatrix_stub.o: multMatrix/multmatrix_stub.cpp.o
 
 # target to build an object file
 multMatrix/multmatrix_stub.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_stub.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/multmatrix_stub.cpp.o
 .PHONY : multMatrix/multmatrix_stub.cpp.o
 
 multMatrix/multmatrix_stub.i: multMatrix/multmatrix_stub.cpp.i
@@ -359,7 +367,7 @@ multMatrix/multmatrix_stub.i: multMatrix/multmatrix_stub.cpp.i
 
 # target to preprocess a source file
 multMatrix/multmatrix_stub.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_stub.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/multmatrix_stub.cpp.i
 .PHONY : multMatrix/multmatrix_stub.cpp.i
 
 multMatrix/multmatrix_stub.s: multMatrix/multmatrix_stub.cpp.s
@@ -368,7 +376,7 @@ multMatrix/multmatrix_stub.s: multMatrix/multmatrix_stub.cpp.s
 
 # target to generate assembly for a file
 multMatrix/multmatrix_stub.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_stub.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/multmatrix_stub.cpp.s
 .PHONY : multMatrix/multmatrix_stub.cpp.s
 
 multMatrix/utils.o: multMatrix/utils.cpp.o
@@ -377,7 +385,8 @@ multMatrix/utils.o: multMatrix/utils.cpp.o
 
 # target to build an object file
 multMatrix/utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/utils.cpp.o
 .PHONY : multMatrix/utils.cpp.o
 
 multMatrix/utils.i: multMatrix/utils.cpp.i
@@ -386,7 +395,8 @@ multMatrix/utils.i: multMatrix/utils.cpp.i
 
 # target to preprocess a source file
 multMatrix/utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/utils.cpp.i
 .PHONY : multMatrix/utils.cpp.i
 
 multMatrix/utils.s: multMatrix/utils.cpp.s
@@ -395,7 +405,8 @@ multMatrix/utils.s: multMatrix/utils.cpp.s
 
 # target to generate assembly for a file
 multMatrix/utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixEXEC.dir/build.make CMakeFiles/multMatrixEXEC.dir/multMatrix/utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/utils.cpp.s
 .PHONY : multMatrix/utils.cpp.s
 
 # Help Target
@@ -406,8 +417,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... fileManagerEXEC"
-	@echo "... multMatrixEXEC"
+	@echo "... fileManagerClient"
+	@echo "... fileManagerServer"
+	@echo "... multMatrixClient"
+	@echo "... multMatrixServer"
 	@echo "... fileManager/filemanager.o"
 	@echo "... fileManager/filemanager.i"
 	@echo "... fileManager/filemanager.s"
@@ -420,9 +433,6 @@ help:
 	@echo "... multMatrix/mainPR1Server.o"
 	@echo "... multMatrix/mainPR1Server.i"
 	@echo "... multMatrix/mainPR1Server.s"
-	@echo "... multMatrix/main_multMatrix.o"
-	@echo "... multMatrix/main_multMatrix.i"
-	@echo "... multMatrix/main_multMatrix.s"
 	@echo "... multMatrix/multmatrix.o"
 	@echo "... multMatrix/multmatrix.i"
 	@echo "... multMatrix/multmatrix.s"

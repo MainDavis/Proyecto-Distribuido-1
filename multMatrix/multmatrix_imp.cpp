@@ -47,24 +47,37 @@ void multmatrix_imp::exec(){
                 case LEER_MATRIX: {
 
                     char* fichNombre_leer=nullptr;
-                    int fichSize=0;
+                    char* buff = nullptr;
+                    int dataLen=0;
                     matrix_t* datosLeidos=nullptr;
 
                     //RECIBIR LOS DATOS DE LA MATRIZ EN EL FICHERO
                     recvMSG(clientID,(void**)&fichNombre_leer,&dataLen);
-
                     //LEER LOS DATOS
                     datosLeidos=ops->readMatrix(fichNombre_leer);
                     
-                    //ENVIAR LOS DATOS DE VUELTA EN UNA MATRIX_T
-                    sendMSG(clientID,(void*)&fichSize,sizeof(int));
-                    sendMSG(clientID,(void*)&datosLeidos,fichSize);
-
-
+                    if(datosLeidos != NULL){
+                        //Notifico al cliente que le fichero no existe
+                        int msg = 1;
+                        sendMSG(clientID,(void*)&msg,sizeof(int));
+                        //ENVIAR LOS DATOS DE VUELTA EN UNA MATRIX_T
+                        //Enviamos las columnas
+                        sendMSG(clientID,(void*)&datosLeidos->cols,sizeof(int));
+                        //Enviamos las filas
+                        sendMSG(clientID,(void*)&datosLeidos->rows,sizeof(int));
+                        //Enviamos los datos
+                        sendMSG(clientID,(void*)datosLeidos->data, sizeof(int)*datosLeidos->cols*datosLeidos->rows);
+                    }else{
+                        //Notifico al cliente que le fichero no existe
+                        int msg = 0;
+                        sendMSG(clientID,(void*)&msg,sizeof(int));
+                    }
+                    
                     //LIBERAR MEMORIA!!!!!!!!
                     delete fichNombre_leer;
                     delete datosLeidos;
-
+                    delete msg;
+                    std::cout << "1";
                 }
                     break;
 

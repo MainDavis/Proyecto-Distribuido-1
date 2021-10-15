@@ -22,7 +22,10 @@ CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_imp.cpp.o: ../multMatrix/mul
 CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_imp.cpp.o: ../multMatrix/multmatrix_imp.h
 CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_imp.cpp.o: ../multMatrix/utils.h
 
+CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_stub.cpp.o: ../multMatrix/multmatrix.h
 CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_stub.cpp.o: ../multMatrix/multmatrix_stub.cpp
+CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_stub.cpp.o: ../multMatrix/multmatrix_stub.h
+CMakeFiles/multMatrixEXEC.dir/multMatrix/multmatrix_stub.cpp.o: ../multMatrix/utils.h
 
 CMakeFiles/multMatrixEXEC.dir/multMatrix/utils.cpp.o: ../multMatrix/utils.cpp
 CMakeFiles/multMatrixEXEC.dir/multMatrix/utils.cpp.o: ../multMatrix/utils.h

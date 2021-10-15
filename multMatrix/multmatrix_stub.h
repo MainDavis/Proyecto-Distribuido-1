@@ -15,7 +15,7 @@ class multmatrix_stub
 {
 private:
     
-    int serverId = 0;
+    int serverID = 0;
 
 public:
     multmatrix_stub();
@@ -26,11 +26,3 @@ public:
     matrix_t *createIdentity(int rows, int cols);
     matrix_t *createRandMatrix(int rows, int cols);
 };
-
-multmatrix_stub::multmatrix_stub()
-{
-}
-
-multmatrix_stub::~multmatrix_stub()
-{
-}
