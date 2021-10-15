@@ -1,7 +1,5 @@
 #include "multmatrix_imp.h"
 
-
-#define ESTRUCTURA_MATRIX 		'E'
 #define LEER_MATRIX	            'L'
 #define ESCRIBIR_MATRIX 	 	'R'
 #define MULT_MATRIX 	        'M'
@@ -57,6 +55,7 @@ void multmatrix_imp::exec(){
 
                     //LEER LOS DATOS
                     datosLeidos=ops->readMatrix(fichNombre_leer);
+                    
                     //ENVIAR LOS DATOS DE VUELTA EN UNA MATRIX_T
                     sendMSG(clientID,(void*)&fichSize,sizeof(int));
                     sendMSG(clientID,(void*)&datosLeidos,fichSize);
@@ -72,17 +71,14 @@ void multmatrix_imp::exec(){
                 case ESCRIBIR_MATRIX: {
 
                     char* fichNombre_escribir=nullptr;
-                    int* fichSize=0;
-                    char* datosLeidos=nullptr;
-
+                    int fichSize=0;
                     matrix_t* m = new matrix_t;
-                    char* datosEscritos = nullptr;
 
                     //RECIBIR MATRIZ ALMACENADA EN MATRIX_T
                     recvMSG(clientID,(void**)&fichNombre_escribir,&dataLen);
 
 					recvMSG(clientID,(void**)&msg,&dataLen);
-					memcpy(&(m->rows),msg,sizeof(int));         //ROWS
+					memcpy(&m->rows,msg,sizeof(int));         //ROWS
 					delete msg;
 
 					recvMSG(clientID,(void**)&msg,&dataLen);
@@ -91,19 +87,44 @@ void multmatrix_imp::exec(){
 
                     recvMSG(clientID,(void**)&m->data,&dataLen);         //DATOS
 
-
                     //ESCRIBIR LA MATRIX DE MATRIX_T EN EL FICHERO
                     ops->writeMatrix(m ,fichNombre_escribir);
 
-                    //
-
-
+                    delete fichNombre_escribir;
+                    delete m;
 
                     }
                     break;
 
                 case MULT_MATRIX: {
 
+                    matrix_t* m1 = new matrix_t;
+                    matrix_t* m2 = new matrix_t;
+                    matrix_t* result = new matrix_t;
+
+                    //Matriz 1
+					recvMSG(clientID,(void**)&msg,&dataLen);
+					memcpy(&m1->rows,msg,sizeof(int));         //ROWS
+					delete msg;
+
+					recvMSG(clientID,(void**)&msg,&dataLen);
+					memcpy(&m1->cols,msg,sizeof(int));            //COLS
+					delete msg;
+
+                    recvMSG(clientID,(void**)&m1->data,&dataLen);         //DATOS
+
+                    //Matriz 2
+                    recvMSG(clientID,(void**)&msg,&dataLen);
+					memcpy(&m2->rows,msg,sizeof(int));         //ROWS
+					delete msg;
+
+					recvMSG(clientID,(void**)&msg,&dataLen);
+					memcpy(&m2->cols,msg,sizeof(int));            //COLS
+					delete msg;
+
+                    recvMSG(clientID,(void**)&m1->data,&dataLen);         //DATOS
+
+                    result = ops->multMatrices(m1, m2);
 
                     }
                     break;
@@ -129,6 +150,6 @@ void multmatrix_imp::exec(){
         }
     
     }
-    
+
 }
 
