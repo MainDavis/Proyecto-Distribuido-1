@@ -1,4 +1,4 @@
 /home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/rebuild_cache.dir
 /home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/edit_cache.dir
-/home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/multMatrix1.dir
-/home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/fileManager1.dir
+/home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/multMatrixExec.dir
+/home/davis/Escritorio/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerExec.dir
