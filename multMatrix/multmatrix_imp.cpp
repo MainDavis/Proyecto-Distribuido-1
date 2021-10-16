@@ -84,65 +84,107 @@ void multmatrix_imp::exec(){
 
                     char* fichNombre_escribir=nullptr;
                     int fichSize=0;
+                    int *buff = nullptr;
                     matrix_t* m = new matrix_t;
 
                     //RECIBIR MATRIZ ALMACENADA EN MATRIX_T
                     recvMSG(clientID,(void**)&fichNombre_escribir,&dataLen);
-
-					recvMSG(clientID,(void**)&msg,&dataLen);
-					memcpy(&m->rows,msg,sizeof(int));         //ROWS
-					delete msg;
-
-					recvMSG(clientID,(void**)&msg,&dataLen);
-					memcpy(&m->cols,msg,sizeof(int));            //COLS
-					delete msg;
-
-                    recvMSG(clientID,(void**)&m->data,&dataLen);         //DATOS
+                    //Recibimos los datos de la matriz
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    memcpy(&m->cols, buff, sizeof(int));
+                    //Recibimos las filas
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    memcpy(&m->rows, buff, sizeof(int));
+                    //Recibimos los datos
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    m->data = buff;
 
                     //ESCRIBIR LA MATRIX DE MATRIX_T EN EL FICHERO
                     ops->writeMatrix(m ,fichNombre_escribir);
 
                     delete fichNombre_escribir;
+                    delete buff;
                     delete m;
 
                     }
                     break;
 
                 case MULT_MATRIX: {
+                    int *buff = nullptr;
 
                     matrix_t* m1 = new matrix_t;
                     matrix_t* m2 = new matrix_t;
                     matrix_t* result = new matrix_t;
 
-                    //Matriz 1
-					recvMSG(clientID,(void**)&msg,&dataLen);
-					memcpy(&m1->rows,msg,sizeof(int));         //ROWS
-					delete msg;
+                    //Recibimos los datos de la primera matriz
+                    //Recibimos las columnas
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    memcpy(&m1->cols, buff, sizeof(int));
+                    //Recibimos las filas
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    memcpy(&m1->rows, buff, sizeof(int));
+                    //Recibimos los datos
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    m1->data = buff;
 
-					recvMSG(clientID,(void**)&msg,&dataLen);
-					memcpy(&m1->cols,msg,sizeof(int));            //COLS
-					delete msg;
-
-                    recvMSG(clientID,(void**)&m1->data,&dataLen);         //DATOS
-
-                    //Matriz 2
-                    recvMSG(clientID,(void**)&msg,&dataLen);
-					memcpy(&m2->rows,msg,sizeof(int));         //ROWS
-					delete msg;
-
-					recvMSG(clientID,(void**)&msg,&dataLen);
-					memcpy(&m2->cols,msg,sizeof(int));            //COLS
-					delete msg;
-
-                    recvMSG(clientID,(void**)&m1->data,&dataLen);         //DATOS
+                    //Recibimos los datos de la primera matriz
+                    //Recibimos las columnas
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    memcpy(&m2->cols, buff, sizeof(int));
+                    //Recibimos las filas
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    memcpy(&m2->rows, buff, sizeof(int));
+                    //Recibimos los datos
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    m2->data = buff;
 
                     result = ops->multMatrices(m1, m2);
+
+                    //Miramos si se ha podido hacer la operación
+                    if(result != NULL){
+                        //Enviamos el mensaje de que ha tenido éxito
+                        *buff = 1;
+                        sendMSG(clientID,(void*)buff, sizeof(int));
+                        //Enviamos los datos de la matriz resultado
+                        //Enviamos las columnas
+                        sendMSG(clientID,(void*)&result->cols,sizeof(int));
+                        //Enviamos las filas
+                        sendMSG(clientID,(void*)&result->rows,sizeof(int));
+                        //Enviamos los datos
+                        sendMSG(clientID,(void*)result->data, sizeof(int)*result->cols*result->rows);
+                    }else{
+                        //Enviamos el mensaje de que no ha tenido éxito
+                        *buff = 0;
+                        sendMSG(clientID,(void*)buff, sizeof(int));
+                    }
+
+                    for(int i=0; i<9; i++)
+                    std::cout << "[" << m1->data[i] << "] ";
+                    std::cout << "\n";
+                    for(int i=0; i<9; i++)
+                        std::cout << "[" << m2->data[i] << "] ";
+                    std::cout << "\n";
+                    for(int i=0; i<9; i++)
+                        std::cout << "[" << result->data[i] << "] ";
+                    std::cout << "\n";
 
                     }
                     break;
 
                 case CREATE_IDENTITY: {
+                    matrix_t* result = new matrix_t;
+                    int dataLen = 0;
+                    int *datos = nullptr;
 
+                    //Recibimos las filas y columnas
+                    recvMSG(clientID, (void**)&datos, &dataLen);
+                    //Creamos la matrix aleatoria
+                    result = ops->createIdentity(datos[0], datos[1]);
+
+                    sendMSG(clientID,(void*)result->data, sizeof(int)*datos[0]*datos[1]);
+                    
+                    delete datos;
+                    delete result;
 
                     }
                     break;
@@ -150,15 +192,16 @@ void multmatrix_imp::exec(){
                 case CREATE_RANDOM: {
                     matrix_t* result = new matrix_t;
                     int dataLen = 0;
-                    int *data = nullptr;
+                    int *datos = nullptr;
 
-                    recvMSG(clientID, (void**)&data, &dataLen);
+                    //Recibimos las filas y columnas
+                    recvMSG(clientID, (void**)&datos, &dataLen);
+                    //Creamos la matrix aleatoria
+                    result = ops->createRandMatrix(datos[0], datos[1]);
 
-                    result = ops->createRandMatrix(data[0], data[1]);
-
-                    sendMSG(clientID,(void*)result->data, sizeof(int)*data[0]*data[1]);
+                    sendMSG(clientID,(void*)result->data, sizeof(int)*datos[0]*datos[1]);
                     
-                    delete data;
+                    delete datos;
                     delete result;
 
                     }

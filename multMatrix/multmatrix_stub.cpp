@@ -83,17 +83,119 @@ matrix_t* multmatrix_stub::readMatrix(const char* file){
 /////
 /////
 matrix_t* multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
-    return NULL;
+    
+    matrix_t* result = new matrix_t;
+    char msg = MULT_MATRIX;
+    int dataLen = 0;
+    int *buff = nullptr;
+
+    //Enviamos la operación al server
+    sendMSG(serverID, (void*)&msg, sizeof(char));
+
+    //Enviamos los datos de la primera matriz
+    //Enviamos las columnas
+    sendMSG(serverID,(void*)&m1->cols,sizeof(int));
+    //Enviamos las filas
+    sendMSG(serverID,(void*)&m1->rows,sizeof(int));
+    //Enviamos los datos
+    sendMSG(serverID,(void*)m1->data, sizeof(int)*m1->cols*m1->rows);
+
+    //Enviamos los datos de la primera matriz
+    //Enviamos las columnas
+    sendMSG(serverID,(void*)&m2->cols,sizeof(int));
+    //Enviamos las filas
+    sendMSG(serverID,(void*)&m2->rows,sizeof(int));
+    //Enviamos los datos
+    sendMSG(serverID,(void*)m2->data, sizeof(int)*m2->cols*m2->rows);
+
+    //Miramos si se ha podido hacer la operacion
+    recvMSG(serverID, (void**)&buff, &dataLen);
+
+    if(*buff == 1){
+        //Recibimos los datos de la matriz resultado
+        recvMSG(serverID, (void**)&buff, &dataLen);
+        memcpy(&result->cols, buff, sizeof(int));
+        //Recibimos las filas
+        recvMSG(serverID, (void**)&buff, &dataLen);
+        memcpy(&result->rows, buff, sizeof(int));
+        //Recibimos los datos
+        recvMSG(serverID, (void**)&buff, &dataLen);
+        result->data = buff;
+
+        //delete buff;
+        return result;
+
+    }else{
+        //delete buff;
+        return NULL;
+    }
+
+
+
+    for(int i=0; i<9; i++)
+        std::cout << "[" << m1->data[i] << "] ";
+    std::cout << "\n";
+    for(int i=0; i<9; i++)
+        std::cout << "[" << m2->data[i] << "] ";
+    std::cout << "\n";
+    for(int i=0; i<9; i++)
+        std::cout << "[" << result->data[i] << "] ";
+    std::cout << "\n";
+
+
+    
 }
 /////
 /////
 void multmatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
+    char msg = ESCRIBIR_MATRIX;
+    int dataLen = 0;
+    int* buff = nullptr;
+
+    //Enviamos la operación al server 
+    sendMSG(serverID, (void*)&msg, sizeof(char));
+
+    //Enviamos el nombre del fichero
+    sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
+    //Enviamos las columnas
+    sendMSG(serverID,(void*)&m->cols,sizeof(int));
+    //Enviamos las filas
+    sendMSG(serverID,(void*)&m->rows,sizeof(int));
+    //Enviamos los datos
+    sendMSG(serverID,(void*)m->data, sizeof(int)*m->cols*m->rows);
 
 }
 /////
 /////
 matrix_t* multmatrix_stub::createIdentity(int rows, int cols){
-    return NULL;
+    matrix_t* result = new matrix_t;
+    char msg = CREATE_IDENTITY;
+    int dataLen = 0;
+    int* data = nullptr;
+
+    //Enviamos la operación al server 
+    sendMSG(serverID, (void*)&msg, sizeof(char));
+
+    //Enviamos las filas y columnas
+    data = new int[2];
+    data[0] = rows;
+    data[1] = cols;
+
+    sendMSG(serverID, (void*)data, sizeof(int)*2);
+
+    //Ensamblamos la matriz
+    result->cols = cols;
+    result->rows = rows;
+
+    data = new int[rows*cols];
+
+    recvMSG(serverID, (void**)&data, &dataLen);
+
+    result->data = data;
+
+    //delete data;
+
+    return result;
 }
 /////
 /////
@@ -112,17 +214,19 @@ matrix_t* multmatrix_stub::createRandMatrix(int rows, int cols){
     data[0] = rows;
     data[1] = cols;
 
-    sendMSG(serverID, (void**)&data, sizeof(int)*2);
-    delete data;
+    sendMSG(serverID, (void*)data, sizeof(int)*2);
+
     //Ensamblamos la matriz
     result->cols = cols;
     result->rows = rows;
 
     data = new int[rows*cols];
+
     recvMSG(serverID, (void**)&data, &dataLen);
+
     result->data = data;
 
-    delete data;
+    //delete data;
 
     return result;
 }
