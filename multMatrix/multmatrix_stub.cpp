@@ -33,7 +33,7 @@ multmatrix_stub::~multmatrix_stub(){
     char* buff=nullptr;
     int dataLen=0;
     char state=0;
-    recvMSG(serverID,(void**)&buff,&dataLen);
+    recvMSG(serverID, (void**)&buff, &dataLen);
     memcpy(&state,buff,sizeof(char));
     delete buff;
 
@@ -58,20 +58,19 @@ matrix_t* multmatrix_stub::readMatrix(const char* file){
     //Recibimos si ha tenido exito
     recvMSG(serverID, (void**)&exito, &dataLen);
     if(*exito == 1){
-        std::cout << "1 ";
+
         //Recibimos las columnas
         recvMSG(serverID, (void**)&buff, &dataLen);
         memcpy(&result->cols, buff, sizeof(int));
-        std::cout << "2 ";
+
         //Recibimos las filas
         recvMSG(serverID, (void**)&buff, &dataLen);
         memcpy(&result->rows, buff, sizeof(int));
-        std::cout << "3 ";
+
         //Recibimos los datos
         recvMSG(serverID, (void**)&buff, &dataLen);
         result->data = buff;
         
-        std::cout << "4 \n";  
         return result;
     }else{
         std::cout<< "ERROR: Fichero " << std::string(file) <<" no existe\n";
