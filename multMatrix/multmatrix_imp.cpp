@@ -4,6 +4,7 @@
 #define ESCRIBIR_MATRIX 	 	'R'
 #define MULT_MATRIX 	        'M'
 #define CREATE_IDENTITY  	    'C'
+#define CREATE_RANDOM           'A'
 
 #define OP_EXIT			'E'
 #define OP_OK			'O'
@@ -50,7 +51,6 @@ void multmatrix_imp::exec(){
                     char* buff = nullptr;
                     int dataLen=0;
                     matrix_t* datosLeidos=nullptr;
-
                     //RECIBIR LOS DATOS DE LA MATRIZ EN EL FICHERO
                     recvMSG(clientID,(void**)&fichNombre_leer,&dataLen);
                     //LEER LOS DATOS
@@ -76,8 +76,7 @@ void multmatrix_imp::exec(){
                     //LIBERAR MEMORIA!!!!!!!!
                     delete fichNombre_leer;
                     delete datosLeidos;
-                    delete msg;
-                    std::cout << "1";
+
                 }
                     break;
 
@@ -144,6 +143,23 @@ void multmatrix_imp::exec(){
 
                 case CREATE_IDENTITY: {
 
+
+                    }
+                    break;
+                
+                case CREATE_RANDOM: {
+                    matrix_t* result = new matrix_t;
+                    int dataLen = 0;
+                    int *data = nullptr;
+
+                    recvMSG(clientID, (void**)&data, &dataLen);
+
+                    result = ops->createRandMatrix(data[0], data[1]);
+
+                    sendMSG(clientID,(void*)result->data, sizeof(int)*data[0]*data[1]);
+                    
+                    delete data;
+                    delete result;
 
                     }
                     break;

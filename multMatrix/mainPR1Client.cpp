@@ -19,7 +19,8 @@ int main()
     multmatrix_stub* mmatrix=new multmatrix_stub();
 
 
-    //matrix_t* m1= mmatrix->createRandMatrix(5,5);
+    matrix_t* m1= mmatrix->createRandMatrix(5,5);
+    std::cout << "MATRIZ CREADA\n";
     //matrix_t* m2= mmatrix->createIdentity(5,5);
     //matrix_t* mres=mmatrix->multMatrices(m1,m2);
     //mmatrix->writeMatrix(mres,"resultado.txt");
@@ -27,9 +28,7 @@ int main()
     //matrix_t* mres2=mmatrix->multMatrices(m1,m3);
     //mmatrix->writeMatrix(mres2,"resultado2.txt");
 
-    std::cout << "COLS: " << m3->cols;
-
-    //freeMatrix(m1);
+    freeMatrix(m1);
     //freeMatrix(m2);
     //freeMatrix(mres);
     freeMatrix(m3);

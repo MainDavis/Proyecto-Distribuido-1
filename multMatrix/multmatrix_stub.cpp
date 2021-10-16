@@ -4,6 +4,7 @@
 #define ESCRIBIR_MATRIX 	 	'R'
 #define MULT_MATRIX 	        'M'
 #define CREATE_IDENTITY  	    'C'
+#define CREATE_RANDOM  	        'A'
 
 #define OP_EXIT			'E'
 #define OP_OK			'O'
@@ -27,6 +28,7 @@ multmatrix_stub::multmatrix_stub(){
 /////
 /////
 multmatrix_stub::~multmatrix_stub(){
+
     char msg=OP_EXIT;
     sendMSG(serverID,(void*)&msg,sizeof(char));
     //recibir resultado
@@ -96,5 +98,31 @@ matrix_t* multmatrix_stub::createIdentity(int rows, int cols){
 /////
 /////
 matrix_t* multmatrix_stub::createRandMatrix(int rows, int cols){
-    return NULL;
+
+    matrix_t* result = new matrix_t;
+    char msg = CREATE_RANDOM;
+    int dataLen = 0;
+    int* data = nullptr;
+
+    //Enviamos la operación al server 
+    sendMSG(serverID, (void*)&msg, sizeof(char));
+
+    //Enviamos las filas y columnas
+    data = new int[2];
+    data[0] = rows;
+    data[1] = cols;
+
+    sendMSG(serverID, (void**)&data, sizeof(int)*2);
+    delete data;
+    //Ensamblamos la matriz
+    result->cols = cols;
+    result->rows = rows;
+
+    data = new int[rows*cols];
+    recvMSG(serverID, (void**)&data, &dataLen);
+    result->data = data;
+
+    delete data;
+
+    return result;
 }
