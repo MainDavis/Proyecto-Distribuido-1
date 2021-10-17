@@ -51,13 +51,14 @@ void multmatrix_imp::exec(){
                     char* buff = nullptr;
                     int dataLen=0;
                     matrix_t* datosLeidos=nullptr;
+
                     //RECIBIR LOS DATOS DE LA MATRIZ EN EL FICHERO
                     recvMSG(clientID,(void**)&fichNombre_leer,&dataLen);
                     //LEER LOS DATOS
                     datosLeidos=ops->readMatrix(fichNombre_leer);
-                    
+
                     if(datosLeidos != NULL){
-                        //Notifico al cliente que le fichero no existe
+                        //Notifico al cliente que le fichero existe
                         int msg = 1;
                         sendMSG(clientID,(void*)&msg,sizeof(int));
                         //ENVIAR LOS DATOS DE VUELTA EN UNA MATRIX_T
@@ -158,15 +159,7 @@ void multmatrix_imp::exec(){
                         sendMSG(clientID,(void*)buff, sizeof(int));
                     }
 
-                    for(int i=0; i<9; i++)
-                    std::cout << "[" << m1->data[i] << "] ";
-                    std::cout << "\n";
-                    for(int i=0; i<9; i++)
-                        std::cout << "[" << m2->data[i] << "] ";
-                    std::cout << "\n";
-                    for(int i=0; i<9; i++)
-                        std::cout << "[" << result->data[i] << "] ";
-                    std::cout << "\n";
+                    
 
                     }
                     break;

@@ -129,21 +129,7 @@ matrix_t* multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
         //delete buff;
         return NULL;
     }
-
-
-
-    for(int i=0; i<9; i++)
-        std::cout << "[" << m1->data[i] << "] ";
-    std::cout << "\n";
-    for(int i=0; i<9; i++)
-        std::cout << "[" << m2->data[i] << "] ";
-    std::cout << "\n";
-    for(int i=0; i<9; i++)
-        std::cout << "[" << result->data[i] << "] ";
-    std::cout << "\n";
-
-
-    
+        
 }
 /////
 /////
