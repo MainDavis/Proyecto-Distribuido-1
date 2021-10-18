@@ -6,26 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp
-multmatrix.h
-/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h
-multmatrix.h
-/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h
-stdio.h
--
-stdlib.h
--
-iostream
--
-string
--
-cstring
--
-sys/types.h
--
-unistd.h
--
-
 /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 
 /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.cpp

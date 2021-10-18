@@ -116,7 +116,7 @@ void multmatrix_imp::exec(){
                     matrix_t* m1 = new matrix_t;
                     matrix_t* m2 = new matrix_t;
                     matrix_t* result = new matrix_t;
-
+                    
                     //Recibimos los datos de la primera matriz
                     //Recibimos las columnas
                     recvMSG(clientID, (void**)&buff, &dataLen);
