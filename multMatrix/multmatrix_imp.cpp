@@ -1,7 +1,5 @@
 #include "multmatrix_imp.h"
 
-#define LEER_MATRIX	            'L'
-#define ESCRIBIR_MATRIX 	 	'R'
 #define MULT_MATRIX 	        'M'
 #define CREATE_IDENTITY  	    'C'
 #define CREATE_RANDOM           'A'
@@ -44,72 +42,7 @@ void multmatrix_imp::exec(){
 			delete msg;
 
             switch (tipo_op){
-
-                case LEER_MATRIX: {
-
-                    char* fichNombre_leer=nullptr;
-                    char* buff = nullptr;
-                    int dataLen=0;
-                    matrix_t* datosLeidos=nullptr;
-
-                    //RECIBIR LOS DATOS DE LA MATRIZ EN EL FICHERO
-                    recvMSG(clientID,(void**)&fichNombre_leer,&dataLen);
-                    //LEER LOS DATOS
-                    datosLeidos=ops->readMatrix(fichNombre_leer);
-
-                    if(datosLeidos != NULL){
-                        //Notifico al cliente que le fichero existe
-                        int msg = 1;
-                        sendMSG(clientID,(void*)&msg,sizeof(int));
-                        //ENVIAR LOS DATOS DE VUELTA EN UNA MATRIX_T
-                        //Enviamos las columnas
-                        sendMSG(clientID,(void*)&datosLeidos->cols,sizeof(int));
-                        //Enviamos las filas
-                        sendMSG(clientID,(void*)&datosLeidos->rows,sizeof(int));
-                        //Enviamos los datos
-                        sendMSG(clientID,(void*)datosLeidos->data, sizeof(int)*datosLeidos->cols*datosLeidos->rows);
-                    }else{
-                        //Notifico al cliente que le fichero no existe
-                        int msg = 0;
-                        sendMSG(clientID,(void*)&msg,sizeof(int));
-                    }
-                    
-                    //LIBERAR MEMORIA!!!!!!!!
-                    delete fichNombre_leer;
-                    delete datosLeidos;
-
-                }
-                    break;
-
-                case ESCRIBIR_MATRIX: {
-
-                    char* fichNombre_escribir=nullptr;
-                    int fichSize=0;
-                    int *buff = nullptr;
-                    matrix_t* m = new matrix_t;
-
-                    //RECIBIR MATRIZ ALMACENADA EN MATRIX_T
-                    recvMSG(clientID,(void**)&fichNombre_escribir,&dataLen);
-                    //Recibimos los datos de la matriz
-                    recvMSG(clientID, (void**)&buff, &dataLen);
-                    memcpy(&m->cols, buff, sizeof(int));
-                    //Recibimos las filas
-                    recvMSG(clientID, (void**)&buff, &dataLen);
-                    memcpy(&m->rows, buff, sizeof(int));
-                    //Recibimos los datos
-                    recvMSG(clientID, (void**)&buff, &dataLen);
-                    m->data = buff;
-
-                    //ESCRIBIR LA MATRIX DE MATRIX_T EN EL FICHERO
-                    ops->writeMatrix(m ,fichNombre_escribir);
-
-                    delete fichNombre_escribir;
-                    delete buff;
-                    delete m;
-
-                    }
-                    break;
-
+                
                 case MULT_MATRIX: {
                     int *buff = nullptr;
 

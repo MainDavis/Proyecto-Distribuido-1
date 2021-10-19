@@ -47,38 +47,14 @@ multmatrix_stub::~multmatrix_stub(){
 /////
 matrix_t* multmatrix_stub::readMatrix(const char* file){
     
-    matrix_t* result = new matrix_t;
-    char msg = LEER_MATRIX;
-    int dataLen = 0;
-    int *exito = nullptr, *buff = nullptr;
-    
-    //Enviamos la operación al server 
-    sendMSG(serverID, (void*)&msg, sizeof(char));
-    //Enviamos el nombre del fichero
-    sendMSG(serverID, (void**)file, strlen(file)+1);
+    multMatrix* ops = new multMatrix();
 
-    //Recibimos si ha tenido exito
-    recvMSG(serverID, (void**)&exito, &dataLen);
-    if(*exito == 1){
+    matrix_t* result = ops->readMatrix(file);
 
-        //Recibimos las columnas
-        recvMSG(serverID, (void**)&buff, &dataLen);
-        memcpy(&result->cols, buff, sizeof(int));
+    delete ops;
 
-        //Recibimos las filas
-        recvMSG(serverID, (void**)&buff, &dataLen);
-        memcpy(&result->rows, buff, sizeof(int));
+    return result;
 
-        //Recibimos los datos
-        recvMSG(serverID, (void**)&buff, &dataLen);
-        result->data = buff;
-        
-        return result;
-    }else{
-        std::cout<< "ERROR: Fichero " << std::string(file) <<" no existe\n";
-        return NULL;
-    }
-    
 }
 /////
 /////
@@ -134,21 +110,12 @@ matrix_t* multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
 /////
 /////
 void multmatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
-    char msg = ESCRIBIR_MATRIX;
-    int dataLen = 0;
-    int* buff = nullptr;
+    
+    multMatrix* ops = new multMatrix();
 
-    //Enviamos la operación al server 
-    sendMSG(serverID, (void*)&msg, sizeof(char));
+    ops->writeMatrix(m, fileName);
 
-    //Enviamos el nombre del fichero
-    sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
-    //Enviamos las columnas
-    sendMSG(serverID,(void*)&m->cols,sizeof(int));
-    //Enviamos las filas
-    sendMSG(serverID,(void*)&m->rows,sizeof(int));
-    //Enviamos los datos
-    sendMSG(serverID,(void*)m->data, sizeof(int)*m->cols*m->rows);
+    delete ops;
 
 }
 /////
