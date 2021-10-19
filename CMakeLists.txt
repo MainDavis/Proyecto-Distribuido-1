@@ -15,7 +15,8 @@ target_link_libraries(fileManagerServer pthread)
 
 project(multMatrixClient LANGUAGES CXX)
 add_executable(multMatrixClient multMatrix/multmatrix.cpp multMatrix/multmatrix.h multMatrix/mainPR1Client.cpp 
-    multMatrix/multmatrix_stub.cpp multMatrix/multmatrix_stub.h multMatrix/utils.cpp multMatrix/utils.h)
+    multMatrix/multmatrix_stub.cpp multMatrix/multmatrix_stub.h multMatrix/utils.cpp multMatrix/utils.h
+    multMatrix/manejoMatriz.cpp multMatrix/manejoMatriz.h)
 target_link_libraries(multMatrixClient pthread)
 
 project(multMatrixServer LANGUAGES CXX)

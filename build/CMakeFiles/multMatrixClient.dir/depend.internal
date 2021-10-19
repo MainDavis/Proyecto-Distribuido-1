@@ -3,9 +3,14 @@
 
 CMakeFiles/multMatrixClient.dir/multMatrix/mainPR1Client.cpp.o
  /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/mainPR1Client.cpp
+ /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/manejoMatriz.h
  /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h
  /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix_stub.h
  /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/utils.h
+CMakeFiles/multMatrixClient.dir/multMatrix/manejoMatriz.cpp.o
+ /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/manejoMatriz.cpp
+ /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/manejoMatriz.h
+ /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 CMakeFiles/multMatrixClient.dir/multMatrix/multmatrix.cpp.o
  /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp
  /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/multmatrix.h

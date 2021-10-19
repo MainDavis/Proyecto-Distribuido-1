@@ -295,6 +295,33 @@ multMatrix/mainPR1Server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multMatrix/mainPR1Server.cpp.s
 .PHONY : multMatrix/mainPR1Server.cpp.s
 
+multMatrix/manejoMatriz.o: multMatrix/manejoMatriz.cpp.o
+
+.PHONY : multMatrix/manejoMatriz.o
+
+# target to build an object file
+multMatrix/manejoMatriz.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/manejoMatriz.cpp.o
+.PHONY : multMatrix/manejoMatriz.cpp.o
+
+multMatrix/manejoMatriz.i: multMatrix/manejoMatriz.cpp.i
+
+.PHONY : multMatrix/manejoMatriz.i
+
+# target to preprocess a source file
+multMatrix/manejoMatriz.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/manejoMatriz.cpp.i
+.PHONY : multMatrix/manejoMatriz.cpp.i
+
+multMatrix/manejoMatriz.s: multMatrix/manejoMatriz.cpp.s
+
+.PHONY : multMatrix/manejoMatriz.s
+
+# target to generate assembly for a file
+multMatrix/manejoMatriz.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multMatrix/manejoMatriz.cpp.s
+.PHONY : multMatrix/manejoMatriz.cpp.s
+
 multMatrix/multmatrix.o: multMatrix/multmatrix.cpp.o
 
 .PHONY : multMatrix/multmatrix.o
@@ -433,6 +460,9 @@ help:
 	@echo "... multMatrix/mainPR1Server.o"
 	@echo "... multMatrix/mainPR1Server.i"
 	@echo "... multMatrix/mainPR1Server.s"
+	@echo "... multMatrix/manejoMatriz.o"
+	@echo "... multMatrix/manejoMatriz.i"
+	@echo "... multMatrix/manejoMatriz.s"
 	@echo "... multMatrix/multmatrix.o"
 	@echo "... multMatrix/multmatrix.i"
 	@echo "... multMatrix/multmatrix.s"
