@@ -180,10 +180,7 @@ int main()
                 
             }
                 break;
-
-            case 6: {
-                //Salir pero no se como se hace
-            }
+                
         }
 
 
