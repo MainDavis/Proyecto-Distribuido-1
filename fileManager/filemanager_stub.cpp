@@ -7,7 +7,9 @@
 #define OP_EXIT			'E'
 #define OP_OK			'O'
 
-filemanager_stub::filemanager_stub(){
+filemanager_stub::filemanager_stub(string path){
+
+    FileManager* op = new FileManager(path);
 
     char* ip=NULL;
     ip=new char[strlen(IP_SERVER)+1];
@@ -44,25 +46,25 @@ filemanager_stub::~filemanager_stub(){
 vector<string*>* filemanager_stub::listFiles(){
     int tamanio=0;
     int DataLen=0;
+    vector<string*>* listaServer = nullptr;
 
-    recvMSG(serverID,(void*)&tamanio,&DataLen);
+    recvMSG(serverID,(void**)&tamanio,&DataLen);
 
     for (unsigned int i = 0; i < tamanio; i++)
-    {
-        recvMSG(serverID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1)
-    }
-    
+        recvMSG(serverID,(void**)listaServer->at(i)->c_str(), &DataLen);    
 
     return NULL;
 }
 
-void filemanager_stub::readFile(char* fileName, char* &data, unsigned long int & dataLength){
+void filemanager_stub::readFile(char* fileName){
+
 
 
 }
 
-void filemanager_stub::writeFile(char* fileName, char* data, unsigned long int dataLength){
+void filemanager_stub::writeFile(char* fileName){
 
+    int 
 
 }
 

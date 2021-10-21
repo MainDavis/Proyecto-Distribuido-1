@@ -18,10 +18,10 @@ private:
     int serverID = 0;
 
 public:
-    filemanager_stub();
+    filemanager_stub(string path);
     ~filemanager_stub();
     vector<string*>* listFiles();
-    void readFile(char* fileName, char* &data, unsigned long int & dataLength);
-    void writeFile(char* fileName, char* data, unsigned long int dataLength);
+    void readFile(char* fileName);
+    void writeFile(char* fileName);
     void freeListedFiles(vector<string*>* fileList);
 };
