@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp
-filemanager.h
-/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.h
-
 /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.h
 iostream
 -
@@ -26,9 +22,43 @@ vector
 dirent.h
 -
 
-/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp
-iostream
--
+/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp
+filemanager_imp.h
+/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager_imp.h
 filemanager.h
 /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.h
+
+/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager_imp.h
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+utils.h
+/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/utils.h
+filemanager.h
+/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.h
+
+/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/utils.h
+sys/types.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+netinet/in.h
+-
+unistd.h
+-
+string.h
+-
+iostream
+-
+map
+-
+list
+-
+thread
+-
 

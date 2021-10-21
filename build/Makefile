@@ -211,6 +211,114 @@ fileManager/filemanager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.s
 .PHONY : fileManager/filemanager.cpp.s
 
+fileManager/filemanager_imp.o: fileManager/filemanager_imp.cpp.o
+
+.PHONY : fileManager/filemanager_imp.o
+
+# target to build an object file
+fileManager/filemanager_imp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o
+.PHONY : fileManager/filemanager_imp.cpp.o
+
+fileManager/filemanager_imp.i: fileManager/filemanager_imp.cpp.i
+
+.PHONY : fileManager/filemanager_imp.i
+
+# target to preprocess a source file
+fileManager/filemanager_imp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i
+.PHONY : fileManager/filemanager_imp.cpp.i
+
+fileManager/filemanager_imp.s: fileManager/filemanager_imp.cpp.s
+
+.PHONY : fileManager/filemanager_imp.s
+
+# target to generate assembly for a file
+fileManager/filemanager_imp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s
+.PHONY : fileManager/filemanager_imp.cpp.s
+
+fileManager/filemanager_stub.o: fileManager/filemanager_stub.cpp.o
+
+.PHONY : fileManager/filemanager_stub.o
+
+# target to build an object file
+fileManager/filemanager_stub.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o
+.PHONY : fileManager/filemanager_stub.cpp.o
+
+fileManager/filemanager_stub.i: fileManager/filemanager_stub.cpp.i
+
+.PHONY : fileManager/filemanager_stub.i
+
+# target to preprocess a source file
+fileManager/filemanager_stub.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.i
+.PHONY : fileManager/filemanager_stub.cpp.i
+
+fileManager/filemanager_stub.s: fileManager/filemanager_stub.cpp.s
+
+.PHONY : fileManager/filemanager_stub.s
+
+# target to generate assembly for a file
+fileManager/filemanager_stub.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.s
+.PHONY : fileManager/filemanager_stub.cpp.s
+
+fileManager/mainPR2Client.o: fileManager/mainPR2Client.cpp.o
+
+.PHONY : fileManager/mainPR2Client.o
+
+# target to build an object file
+fileManager/mainPR2Client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o
+.PHONY : fileManager/mainPR2Client.cpp.o
+
+fileManager/mainPR2Client.i: fileManager/mainPR2Client.cpp.i
+
+.PHONY : fileManager/mainPR2Client.i
+
+# target to preprocess a source file
+fileManager/mainPR2Client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.i
+.PHONY : fileManager/mainPR2Client.cpp.i
+
+fileManager/mainPR2Client.s: fileManager/mainPR2Client.cpp.s
+
+.PHONY : fileManager/mainPR2Client.s
+
+# target to generate assembly for a file
+fileManager/mainPR2Client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.s
+.PHONY : fileManager/mainPR2Client.cpp.s
+
+fileManager/mainPR2Server.o: fileManager/mainPR2Server.cpp.o
+
+.PHONY : fileManager/mainPR2Server.o
+
+# target to build an object file
+fileManager/mainPR2Server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o
+.PHONY : fileManager/mainPR2Server.cpp.o
+
+fileManager/mainPR2Server.i: fileManager/mainPR2Server.cpp.i
+
+.PHONY : fileManager/mainPR2Server.i
+
+# target to preprocess a source file
+fileManager/mainPR2Server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i
+.PHONY : fileManager/mainPR2Server.cpp.i
+
+fileManager/mainPR2Server.s: fileManager/mainPR2Server.cpp.s
+
+.PHONY : fileManager/mainPR2Server.s
+
+# target to generate assembly for a file
+fileManager/mainPR2Server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s
+.PHONY : fileManager/mainPR2Server.cpp.s
+
 fileManager/main_fm.o: fileManager/main_fm.cpp.o
 
 .PHONY : fileManager/main_fm.o
@@ -240,6 +348,36 @@ fileManager/main_fm.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.s
 .PHONY : fileManager/main_fm.cpp.s
+
+fileManager/utils.o: fileManager/utils.cpp.o
+
+.PHONY : fileManager/utils.o
+
+# target to build an object file
+fileManager/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o
+.PHONY : fileManager/utils.cpp.o
+
+fileManager/utils.i: fileManager/utils.cpp.i
+
+.PHONY : fileManager/utils.i
+
+# target to preprocess a source file
+fileManager/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.i
+.PHONY : fileManager/utils.cpp.i
+
+fileManager/utils.s: fileManager/utils.cpp.s
+
+.PHONY : fileManager/utils.s
+
+# target to generate assembly for a file
+fileManager/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.s
+.PHONY : fileManager/utils.cpp.s
 
 multMatrix/mainPR1Client.o: multMatrix/mainPR1Client.cpp.o
 
@@ -424,9 +562,24 @@ help:
 	@echo "... fileManager/filemanager.o"
 	@echo "... fileManager/filemanager.i"
 	@echo "... fileManager/filemanager.s"
+	@echo "... fileManager/filemanager_imp.o"
+	@echo "... fileManager/filemanager_imp.i"
+	@echo "... fileManager/filemanager_imp.s"
+	@echo "... fileManager/filemanager_stub.o"
+	@echo "... fileManager/filemanager_stub.i"
+	@echo "... fileManager/filemanager_stub.s"
+	@echo "... fileManager/mainPR2Client.o"
+	@echo "... fileManager/mainPR2Client.i"
+	@echo "... fileManager/mainPR2Client.s"
+	@echo "... fileManager/mainPR2Server.o"
+	@echo "... fileManager/mainPR2Server.i"
+	@echo "... fileManager/mainPR2Server.s"
 	@echo "... fileManager/main_fm.o"
 	@echo "... fileManager/main_fm.i"
 	@echo "... fileManager/main_fm.s"
+	@echo "... fileManager/utils.o"
+	@echo "... fileManager/utils.i"
+	@echo "... fileManager/utils.s"
 	@echo "... multMatrix/mainPR1Client.o"
 	@echo "... multMatrix/mainPR1Client.i"
 	@echo "... multMatrix/mainPR1Client.s"

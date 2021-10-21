@@ -1,4 +1,5 @@
 #include "filemanager_imp.h"
+#include "filemanager.h"
 
 #define LISTFILES	    'L'
 #define READFILE 	 	'R'
@@ -9,7 +10,7 @@
 
 filemanager_imp::filemanager_imp(int clientID){
 
-	ops=new FileManager();
+	ops=new FileManager("");
 	//inicializar estados, extra... 
 	salir=false;
 	this->clientID=clientID;
@@ -46,12 +47,12 @@ void filemanager_imp::exec(){
                 
             case LISTFILES:{
 
-                listaServer=ops->listFiles();
+                vector<string*> *listaServer = ops->listFiles();
                 int tamanio = listaServer->size();
 
-                sendMSG(clientID,(void*)tamanio,sizeof(int));
+                sendMSG(clientID,(void*)&tamanio,sizeof(int));
 
-                for(unsigned int i=0, i<listaServer->size(),i++){
+                for(unsigned int i=0; i<listaServer->size(); i++){
                     sendMSG(clientID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1);
                 }
 
@@ -70,7 +71,7 @@ void filemanager_imp::exec(){
                 
                 
                 
-                )
+                
 
                 
                 
