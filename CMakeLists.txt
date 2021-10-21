@@ -6,11 +6,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ..)
 
 project(fileManagerClient LANGUAGES CXX)
-add_executable(fileManagerClient fileManager/filemanager.cpp fileManager/filemanager.h fileManager/main_fm.cpp)
+add_executable(fileManagerClient fileManager/filemanager.cpp fileManager/filemanager.h fileManager/main_fm.cpp fileManager/mainPR1Client
+    fileManager/filemanager_stub.cpp fileManager/filemanager_stub.h fileManager/utils.cpp fileManager/utils.h)
 target_link_libraries(fileManagerClient pthread)
 
 project(fileManagerServer LANGUAGES CXX)
-add_executable(fileManagerServer fileManager/filemanager.cpp fileManager/filemanager.h fileManager/main_fm.cpp)
+add_executable(fileManagerServer fileManager/filemanager.cpp fileManager/filemanager.h fileManager/main_fm.cpp fileManager/mainPR1Server
+    fileManager/filemanager_imp.cpp fileManager/filemanager_imp.cpp fileManager/utils.cpp fileManager/utils.h)
 target_link_libraries(fileManagerServer pthread)
 
 project(multMatrixClient LANGUAGES CXX)
