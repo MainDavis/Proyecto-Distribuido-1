@@ -42,6 +42,16 @@ filemanager_stub::~filemanager_stub(){
 }
 
 vector<string*>* filemanager_stub::listFiles(){
+    int tamanio=0;
+    int DataLen=0;
+
+    recvMSG(serverID,(void*)&tamanio,&DataLen);
+
+    for (unsigned int i = 0; i < tamanio; i++)
+    {
+        recvMSG(serverID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1)
+    }
+    
 
     return NULL;
 }
