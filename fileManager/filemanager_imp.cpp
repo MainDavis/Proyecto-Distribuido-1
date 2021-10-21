@@ -7,7 +7,7 @@
 #define OP_EXIT			'E'
 #define OP_OK			'O'
 
-multmatrix_imp::multmatrix_imp(int clientID){
+filemanager_imp::filemanager_imp(int clientID){
 
 	ops=new FileManager();
 	//inicializar estados, extra... 
@@ -15,7 +15,7 @@ multmatrix_imp::multmatrix_imp(int clientID){
 	this->clientID=clientID;
 
 }
-multmatrix_imp::~multmatrix_imp(){
+filemanager_imp::~filemanager_imp(){
 
 	delete ops;
 	closeConnection(clientID);
@@ -46,12 +46,12 @@ void filemanager_imp::exec(){
                 
             case LISTFILES:{
 
-                listaServer= ops-> listFiles();
+                listaServer=ops->listFiles();
                 int tamanio = listaServer->size();
 
                 sendMSG(clientID,(void*)tamanio,sizeof(int));
 
-                for(unsigned int i, i<tamanio,i++){
+                for(unsigned int i=0, i<listaServer->size(),i++){
                     sendMSG(clientID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1);
                 }
 
@@ -67,6 +67,10 @@ void filemanager_imp::exec(){
                 break;
             
             case WRITEFILE:{
+                
+                
+                
+                )
 
                 
                 
