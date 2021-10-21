@@ -46,11 +46,6 @@
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp",
-  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp"
-},
-{
-  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
   "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp"
 },

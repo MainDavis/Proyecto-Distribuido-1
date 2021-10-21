@@ -41,9 +41,9 @@ filemanager_stub::~filemanager_stub(){
 
 }
 
-vector<string*> filemanager_stub::listFiles{
+vector<string*>* filemanager_stub::listFiles(){
 
-
+    return NULL;
 }
 
 void filemanager_stub::readFile(char* fileName, char* &data, unsigned long int & dataLength){

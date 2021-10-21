@@ -325,7 +325,6 @@ fileManager/main_fm.o: fileManager/main_fm.cpp.o
 
 # target to build an object file
 fileManager/main_fm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o
 .PHONY : fileManager/main_fm.cpp.o
 
@@ -335,7 +334,6 @@ fileManager/main_fm.i: fileManager/main_fm.cpp.i
 
 # target to preprocess a source file
 fileManager/main_fm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.i
 .PHONY : fileManager/main_fm.cpp.i
 
@@ -345,7 +343,6 @@ fileManager/main_fm.s: fileManager/main_fm.cpp.s
 
 # target to generate assembly for a file
 fileManager/main_fm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerServer.dir/build.make CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fileManagerClient.dir/build.make CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.s
 .PHONY : fileManager/main_fm.cpp.s
 

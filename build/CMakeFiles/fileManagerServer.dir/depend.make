@@ -14,9 +14,6 @@ CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o: ../fileManager
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o: ../fileManager/mainPR2Server.cpp
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o: ../fileManager/utils.h
 
-CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.o: ../fileManager/filemanager.h
-CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.o: ../fileManager/main_fm.cpp
-
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o: ../fileManager/utils.cpp
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o: ../fileManager/utils.h
 

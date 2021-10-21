@@ -11,7 +11,7 @@ add_executable(fileManagerClient fileManager/filemanager.cpp fileManager/fileman
 target_link_libraries(fileManagerClient pthread)
 
 project(fileManagerServer LANGUAGES CXX)
-add_executable(fileManagerServer fileManager/filemanager.cpp fileManager/filemanager.h fileManager/main_fm.cpp fileManager/mainPR2Server
+add_executable(fileManagerServer fileManager/filemanager.cpp fileManager/filemanager.h fileManager/mainPR2Server
     fileManager/filemanager_imp.cpp fileManager/filemanager_imp.cpp fileManager/utils.cpp fileManager/utils.h)
 target_link_libraries(fileManagerServer pthread)
 
