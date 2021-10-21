@@ -11,9 +11,11 @@
 
 class filemanager_imp{
 private:
-	FileManager* ops=nullptr;
+	FileManager* ops = nullptr;
+	vector<string*> *listaServer = nullptr;
 	bool salir=false;
 	int clientID=0;
+	string path = "./dirpruebaServidor/";
 public:
 	filemanager_imp(int clientID);
 	~filemanager_imp();

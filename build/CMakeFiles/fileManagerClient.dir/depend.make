@@ -9,9 +9,11 @@ CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o: ../fileMana
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o: ../fileManager/filemanager_stub.h
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o: ../fileManager/utils.h
 
+CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o: ../fileManager/filemanager.h
+CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o: ../fileManager/filemanager_stub.h
 CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o: ../fileManager/mainPR2Client.cpp
+CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o: ../fileManager/utils.h
 
-CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o: ../fileManager/filemanager.h
 CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o: ../fileManager/main_fm.cpp
 
 CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o: ../fileManager/utils.cpp

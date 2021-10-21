@@ -7,9 +7,7 @@
 #define OP_EXIT			'E'
 #define OP_OK			'O'
 
-filemanager_stub::filemanager_stub(string path){
-
-    FileManager* op = new FileManager(path);
+filemanager_stub::filemanager_stub(){
 
     char* ip=NULL;
     ip=new char[strlen(IP_SERVER)+1];
@@ -43,32 +41,58 @@ filemanager_stub::~filemanager_stub(){
 
 }
 
-vector<string*>* filemanager_stub::listFiles(){
-    int tamanio=0;
-    int DataLen=0;
-    vector<string*>* listaServer = nullptr;
+void filemanager_stub::listFiles(){
 
-    recvMSG(serverID,(void**)&tamanio,&DataLen);
+    char msg = 'L';
+    sendMSG(serverID, (void*)&msg, sizeof(char));
 
-    for (unsigned int i = 0; i < tamanio; i++)
-        recvMSG(serverID,(void**)listaServer->at(i)->c_str(), &DataLen);    
+    int dataLen = 0;
+    int* len=0;
+    char* fileNames = nullptr;
 
-    return NULL;
+    //Recibo el numero de ficheros que hay
+    recvMSG(serverID,(void**)&len,&dataLen);
+
+    //Recibo los nombres de los ficheros
+    for (unsigned int i = 0; i < *len; i++){
+        recvMSG(serverID,(void**)&fileNames, &dataLen);
+        cout << fileNames << "\t";
+    }
+    cout << "\n";
 }
 
 void filemanager_stub::readFile(char* fileName){
 
+    char msg = READFILE;
+    sendMSG(serverID, (void*)&msg, sizeof(char));
 
+    int dataLen = 0;
+    char* data = nullptr;
+    ops = new FileManager(this->path);
+
+    //Envio el nombre del fichero a descargar
+    sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
+
+    //Recibo el fichero
+    recvMSG(serverID, (void**)&data, &dataLen);
+    
+    ops->writeFile(fileName, data, dataLen);
 
 }
 
 void filemanager_stub::writeFile(char* fileName){
 
-    int 
+    char msg = WRITEFILE;
+    sendMSG(serverID, (void*)&msg, sizeof(char));
 
-}
+    unsigned long fileSize = 0;
+    char* datosLeidos = nullptr;
 
-void filemanager_stub::freeListedFiles(vector<string*>* fileList){
+    //Envio el nombre del fichero
+    sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
 
-    
+    //Leo los datos del archivo
+    ops->readFile(fileName, datosLeidos, fileSize);
+
+    cout << string(datosLeidos) << "\n";
 }

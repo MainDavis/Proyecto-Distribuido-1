@@ -15,13 +15,14 @@ class filemanager_stub
 {
 private:
     
+    FileManager* ops = nullptr;
     int serverID = 0;
+    string path = "./dirpruebaCliente/";
 
 public:
-    filemanager_stub(string path);
+    filemanager_stub();
     ~filemanager_stub();
-    vector<string*>* listFiles();
+    void listFiles();
     void readFile(char* fileName);
     void writeFile(char* fileName);
-    void freeListedFiles(vector<string*>* fileList);
 };
