@@ -4,6 +4,8 @@
 #define LISTFILES	    'L'
 #define READFILE 	 	'R'
 #define WRITEFILE 	    'M'
+#define FREEFICH 	    'F'
+
 
 #define OP_EXIT			'E'
 #define OP_OK			'O'
@@ -32,6 +34,7 @@ void filemanager_imp::exec(){
         char* msg=NULL;
 		int dataLen=0;
 		char tipo_op=-1;
+        vector<string*> *listaServer = nullptr;
 
 		recvMSG(clientID,(void**)&msg,&dataLen);
 
@@ -48,7 +51,7 @@ void filemanager_imp::exec(){
                 
             case LISTFILES:{
 
-                vector<string*> *listaServer = ops->listFiles();
+                listaServer = ops->listFiles();
                 int tamanio = listaServer->size();
 
                 sendMSG(clientID,(void*)&tamanio,sizeof(int));
@@ -62,24 +65,50 @@ void filemanager_imp::exec(){
             
             case READFILE:{
 
+                char* fileName=nullptr;
+				int fileSize=0;
+				char* datosLeidos=nullptr;
+				//recibir datos
+				recvMSG(clientID,(void**)&fileName,&dataLen);
 
-                
-                /* code */
+                ops->readFile(fileName,(void**)datosLeidos,&fileSize);
+
+                //devolver resultado
+				sendMSG(clientID,(void*)&fileSize,sizeof(int));
+				sendMSG(clientID,(void*)datosLeidos,fileSize);
+				//borrar memoria
+				delete fileName;
+				delete datosLeidos;
+
              }
                 break;
             
             case WRITEFILE:{
-                
-                
-                
-                
 
-                
-                
-                
+                char* fileName=nullptr;
+				int fileSize=0;
+				char* datosEscritos=nullptr;
+
+                //RECIBIR FICHERO 
+				recvMSG(clientID,(void**)&fileName,&dataLen);
+
+                ops->writeFile(fileName,(void**)datosEscritos,&fileSize);
+
+				//borrar memoria
+				delete fileName;
+				delete datosEscritos;
+         
              }
                 break;
 
+            case FREEFICH :{
+
+
+                ops->freeListedFiles(listaServer);
+
+             }
+
+                break;
 
             case OP_EXIT: {
                     salir=true;
