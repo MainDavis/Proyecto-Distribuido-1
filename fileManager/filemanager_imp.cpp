@@ -46,9 +46,14 @@ void filemanager_imp::exec(){
                 
             case LISTFILES:{
 
+                listaServer= ops-> listFiles();
+                int tamanio = listaServer->size();
 
-                /* code */
+                sendMSG(clientID,(void*)tamanio,sizeof(int));
 
+                for(unsigned int i, i<tamanio,i++){
+                    sendMSG(clientID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1);
+                }
 
              }
                 break;
@@ -63,9 +68,9 @@ void filemanager_imp::exec(){
             
             case WRITEFILE:{
 
-
                 
-                /* code */
+                
+                
              }
                 break;
 
