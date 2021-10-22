@@ -11,7 +11,6 @@
 #define OP_OK			'O'
 
 filemanager_imp::filemanager_imp(int clientID){
-
 	ops=new FileManager(this->path);
 	//inicializar estados, extra... 
 	salir=false;
@@ -20,6 +19,7 @@ filemanager_imp::filemanager_imp(int clientID){
 }
 
 filemanager_imp::~filemanager_imp(){
+    cout << "1\n";
     if(listaServer != nullptr)
         ops->freeListedFiles(listaServer);
 	delete ops;
@@ -62,14 +62,14 @@ void filemanager_imp::exec(){
              }
                 break;
             
-            case READFILE:{
+            case READFILE:{ //DOWNLOAD
 
                 char* fileName=nullptr;
 				unsigned long fileSize=0;
 				char* datosLeidos=nullptr;
 				//recibir datos
 				recvMSG(clientID,(void**)&fileName,&dataLen);
-        
+
                 ops->readFile(fileName, datosLeidos, fileSize);
                 
                 //devolver resultado
@@ -82,7 +82,7 @@ void filemanager_imp::exec(){
              }
                 break;
             
-            case WRITEFILE:{
+            case WRITEFILE:{ //UPLOAD
 
                 char* fileName=nullptr;
 				unsigned long fileSize=0;
