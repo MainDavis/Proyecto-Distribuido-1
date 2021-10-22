@@ -46,14 +46,29 @@ multmatrix_stub::~multmatrix_stub(){
 /////
 /////
 matrix_t* multmatrix_stub::readMatrix(const char* file){
-    
-    multMatrix* ops = new multMatrix();
 
-    matrix_t* result = ops->readMatrix(file);
+    FILE* f=fopen(file,"r");
 
-    delete ops;
+    if(f==0){
+        std::cout<< "ERROR: Fichero " << std::string(file) <<" no existe\n";
+        return NULL;
+    }
 
-    return result;
+    matrix_t* matrix=new matrix_t[1];
+
+    fscanf(f,"%d %d",&matrix->rows,&matrix->cols);
+
+    std::cout<<"\n\tLeidos fila y columna: "<<matrix->rows<<" "<<matrix->cols<<"\n";
+
+    matrix->data=new int[matrix->rows*matrix->cols];
+
+    for(int i=0;i<matrix->rows*matrix->cols;i++){
+        fscanf(f,"%d",&matrix->data[i]);
+    }
+
+    fclose(f);
+
+    return matrix;
 
 }
 /////
@@ -111,11 +126,15 @@ matrix_t* multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
 /////
 void multmatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
     
-    multMatrix* ops = new multMatrix();
+    FILE* f=fopen(fileName,"w");
 
-    ops->writeMatrix(m, fileName);
+    fprintf(f,"%d %d\n",m->rows,m->cols);
 
-    delete ops;
+    for(int i=0;i<m->rows*m->cols;i++){
+        fprintf(f,"%d\n",m->data[i]);
+    }
+
+    fclose(f);
 
 }
 /////
