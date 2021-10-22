@@ -28,10 +28,16 @@ int main(int argc,char** argv)
 
             //Si el fichero existe
             for(string* i : *vListFiles){
-                
+                if(strcmp(i->c_str(), filename) == 0){
+                    cout << "Existe el fichero: " << *vListFiles->back() << "\n";    
+                    //fm->writeFile(filename);
+                }else if(strcmp(i->c_str(), *vListFiles->back()->c_str() ) == 0){
+
+                }
             }
 
-            fm->writeFile(filename);
+            cout << "No existe el fichero\n";
+
         }else if(strcmp(command, "download") == 0){
             cin >> filename;
             fm->readFile(filename);
