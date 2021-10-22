@@ -20,7 +20,8 @@ filemanager_imp::filemanager_imp(int clientID){
 }
 
 filemanager_imp::~filemanager_imp(){
-    ops->freeListedFiles(listaServer);
+    if(listaServer != nullptr)
+        ops->freeListedFiles(listaServer);
 	delete ops;
 	closeConnection(clientID);
 	//cierre estados, etc...
@@ -49,16 +50,15 @@ void filemanager_imp::exec(){
             switch (tipo_op){
                 
             case LISTFILES:{
-
+                
                 listaServer = ops->listFiles();
                 int len = listaServer->size();
 
                 sendMSG(clientID,(void*)&len,sizeof(int));
 
-                for(unsigned int i=0; i<listaServer->size(); i++){
+                for(unsigned int i=0; i<listaServer->size(); i++)
                     sendMSG(clientID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1);
-                }
-                    
+
              }
                 break;
             
@@ -71,10 +71,10 @@ void filemanager_imp::exec(){
 				recvMSG(clientID,(void**)&fileName,&dataLen);
         
                 ops->readFile(fileName, datosLeidos, fileSize);
-                cout << "2\n";
+                
                 //devolver resultado
 				sendMSG(clientID,(void*)datosLeidos,fileSize);
-                cout << "3\n";
+                
 				//borrar memoria
 				delete fileName;
 				delete datosLeidos;
@@ -90,18 +90,16 @@ void filemanager_imp::exec(){
 
                 //RECIBIR NOMBRE FICHERO 
 				recvMSG(clientID, (void**)&fileName, &dataLen);
-                cout << string(fileName) << "\n";
+
                 //RECIBIR DATOS FICHERO 
 				recvMSG(clientID, (void**)&datosEscritos, &dataLen);
-                cout << string(datosEscritos) <<"\n";
                 
                 fileSize = dataLen;
 
-                cout << string(fileName)<<"\n" ;
-                cout << "1\n";
                 ops->writeFile(fileName, datosEscritos, fileSize);
-                cout << "1\n";
+
 				//borrar memoria
+                ops->freeListedFiles(listaServer);
 				delete fileName;
 				delete datosEscritos;
          

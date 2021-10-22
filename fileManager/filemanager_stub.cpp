@@ -49,7 +49,7 @@ void filemanager_stub::listFiles(){
     int dataLen = 0;
     int* len=0;
     char* fileNames = nullptr;
-
+ 
     //Recibo el numero de ficheros que hay
     recvMSG(serverID,(void**)&len,&dataLen);
 
@@ -68,6 +68,7 @@ void filemanager_stub::readFile(char* fileName){
 
     int dataLen = 0;
     char* data = nullptr;
+    
     ops = new FileManager(this->path);
 
     //Envio el nombre del fichero a descargar
@@ -91,8 +92,15 @@ void filemanager_stub::writeFile(char* fileName){
     //Envio el nombre del fichero
     sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
 
+    ops = new FileManager(this->path);
+
     //Leo los datos del archivo
     ops->readFile(fileName, datosLeidos, fileSize);
+    
+    //Envio los datos del fichero
+    sendMSG(serverID, (void**)datosLeidos, fileSize);
 
-    cout << string(datosLeidos) << "\n";
+    delete ops;
+    delete datosLeidos;
+
 }
