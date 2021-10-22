@@ -25,16 +25,24 @@ filemanager_stub::filemanager_stub(){
 }
 
 filemanager_stub::~filemanager_stub(){
-
+    cout << "1\n";
     char msg=OP_EXIT;
     sendMSG(serverID,(void*)&msg,sizeof(char));
+    cout << "1\n";
     //recibir resultado
     char* buff=nullptr;
     int dataLen=0;
     char state=0;
+
+    cout << "1\n";
+
     recvMSG(serverID, (void**)&buff, &dataLen);
+
     memcpy(&state,buff,sizeof(char));
+cout << "1\n";
+
     delete buff;
+cout << "1\n";
 
     if(state!=OP_OK)
         std::cout<<"ERROR cerrando conexion\n";
@@ -59,9 +67,12 @@ void filemanager_stub::listFiles(){
         cout << fileNames << "\t";
     }
     cout << "\n";
+
+    delete[] len;
+    delete[] fileNames;
 }
 
-void filemanager_stub::readFile(char* fileName){
+void filemanager_stub::readFile(char* fileName){ //DOWNLOAD
 
     char msg = READFILE;
     sendMSG(serverID, (void*)&msg, sizeof(char));
@@ -79,9 +90,12 @@ void filemanager_stub::readFile(char* fileName){
     
     ops->writeFile(fileName, data, dataLen);
 
+    delete ops;
+    delete[] data;
+
 }
 
-void filemanager_stub::writeFile(char* fileName){
+void filemanager_stub::writeFile(char* fileName){ //UPLOAD
 
     char msg = WRITEFILE;
     sendMSG(serverID, (void*)&msg, sizeof(char));
