@@ -20,15 +20,9 @@ filemanager_imp::filemanager_imp(int clientID){
 }
 
 filemanager_imp::~filemanager_imp(){
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     ops->freeListedFiles(listaServer);
->>>>>>> parent of 7755a12 (Terminado, faltan pruebas)
-=======
-    ops->freeListedFiles(listaServer);
->>>>>>> parent of 7755a12 (Terminado, faltan pruebas)
+
 	delete ops;
     closeConnection(clientID);
 	//cierre estados, etc...
@@ -65,18 +59,12 @@ void filemanager_imp::exec(){
 
                 for(unsigned int i=0; i<listaServer->size(); i++){
                     sendMSG(clientID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 
                 ops->freeListedFiles(listaServer);
-=======
+
                 }
-                    
->>>>>>> parent of 7755a12 (Terminado, faltan pruebas)
-=======
-                }
-                    
->>>>>>> parent of 7755a12 (Terminado, faltan pruebas)
+
              }
                 break;
             
