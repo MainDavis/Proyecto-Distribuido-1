@@ -1,22 +1,26 @@
 #include "filemanager_imp.h"
+#include "filemanager.h"
 
 #define LISTFILES	    'L'
 #define READFILE 	 	'R'
 #define WRITEFILE 	    'M'
+#define FREEFICH 	    'F'
+
 
 #define OP_EXIT			'E'
 #define OP_OK			'O'
 
 filemanager_imp::filemanager_imp(int clientID){
 
-	ops=new FileManager();
+	ops=new FileManager(this->path);
 	//inicializar estados, extra... 
 	salir=false;
 	this->clientID=clientID;
 
 }
-filemanager_imp::~filemanager_imp(){
 
+filemanager_imp::~filemanager_imp(){
+    ops->freeListedFiles(listaServer);
 	delete ops;
 	closeConnection(clientID);
 	//cierre estados, etc...
@@ -46,38 +50,63 @@ void filemanager_imp::exec(){
                 
             case LISTFILES:{
 
-                listaServer=ops->listFiles();
-                int tamanio = listaServer->size();
+                listaServer = ops->listFiles();
+                int len = listaServer->size();
 
-                sendMSG(clientID,(void*)tamanio,sizeof(int));
+                sendMSG(clientID,(void*)&len,sizeof(int));
 
-                for(unsigned int i=0, i<listaServer->size(),i++){
+                for(unsigned int i=0; i<listaServer->size(); i++){
                     sendMSG(clientID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1);
                 }
-
+                    
              }
                 break;
             
             case READFILE:{
 
+                char* fileName=nullptr;
+				unsigned long fileSize=0;
+				char* datosLeidos=nullptr;
+				//recibir datos
+				recvMSG(clientID,(void**)&fileName,&dataLen);
+        
+                ops->readFile(fileName, datosLeidos, fileSize);
+                cout << "2\n";
+                //devolver resultado
+				sendMSG(clientID,(void*)datosLeidos,fileSize);
+                cout << "3\n";
+				//borrar memoria
+				delete fileName;
+				delete datosLeidos;
 
-                
-                /* code */
              }
                 break;
             
             case WRITEFILE:{
-                
-                
-                
-                )
 
+                char* fileName=nullptr;
+				unsigned long fileSize=0;
+				char* datosEscritos=nullptr;
+
+                //RECIBIR NOMBRE FICHERO 
+				recvMSG(clientID, (void**)&fileName, &dataLen);
+                cout << string(fileName) << "\n";
+                //RECIBIR DATOS FICHERO 
+				recvMSG(clientID, (void**)&datosEscritos, &dataLen);
+                cout << string(datosEscritos) <<"\n";
                 
-                
-                
+                fileSize = dataLen;
+
+                cout << string(fileName)<<"\n" ;
+                cout << "1\n";
+                ops->writeFile(fileName, datosEscritos, fileSize);
+                cout << "1\n";
+				//borrar memoria
+				delete fileName;
+				delete datosEscritos;
+         
              }
                 break;
-
 
             case OP_EXIT: {
                     salir=true;

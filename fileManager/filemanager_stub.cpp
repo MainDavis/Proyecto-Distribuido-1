@@ -41,22 +41,58 @@ filemanager_stub::~filemanager_stub(){
 
 }
 
-vector<string*> filemanager_stub::listFiles{
+void filemanager_stub::listFiles(){
 
+    char msg = 'L';
+    sendMSG(serverID, (void*)&msg, sizeof(char));
 
+    int dataLen = 0;
+    int* len=0;
+    char* fileNames = nullptr;
+
+    //Recibo el numero de ficheros que hay
+    recvMSG(serverID,(void**)&len,&dataLen);
+
+    //Recibo los nombres de los ficheros
+    for (unsigned int i = 0; i < *len; i++){
+        recvMSG(serverID,(void**)&fileNames, &dataLen);
+        cout << fileNames << "\t";
+    }
+    cout << "\n";
 }
 
-void filemanager_stub::readFile(char* fileName, char* &data, unsigned long int & dataLength){
+void filemanager_stub::readFile(char* fileName){
 
+    char msg = READFILE;
+    sendMSG(serverID, (void*)&msg, sizeof(char));
 
-}
+    int dataLen = 0;
+    char* data = nullptr;
+    ops = new FileManager(this->path);
 
-void filemanager_stub::writeFile(char* fileName, char* data, unsigned long int dataLength){
+    //Envio el nombre del fichero a descargar
+    sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
 
-
-}
-
-void filemanager_stub::freeListedFiles(vector<string*>* fileList){
-
+    //Recibo el fichero
+    recvMSG(serverID, (void**)&data, &dataLen);
     
+    ops->writeFile(fileName, data, dataLen);
+
+}
+
+void filemanager_stub::writeFile(char* fileName){
+
+    char msg = WRITEFILE;
+    sendMSG(serverID, (void*)&msg, sizeof(char));
+
+    unsigned long fileSize = 0;
+    char* datosLeidos = nullptr;
+
+    //Envio el nombre del fichero
+    sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
+
+    //Leo los datos del archivo
+    ops->readFile(fileName, datosLeidos, fileSize);
+
+    cout << string(datosLeidos) << "\n";
 }
