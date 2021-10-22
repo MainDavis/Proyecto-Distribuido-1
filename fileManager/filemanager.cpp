@@ -69,7 +69,6 @@ void FileManager::freeListedFiles(vector<string*>* fileList)
 
 void FileManager::readFile(char* fileName, char* &data, unsigned long int & dataLength)
 {
-    
     string path=this->dirPath+"/"+string(fileName);
     FILE* f=fopen(path.c_str(),"r");
 
@@ -77,6 +76,7 @@ void FileManager::readFile(char* fileName, char* &data, unsigned long int & data
     dataLength= ftell(f);
     fseek(f, 0L, SEEK_SET);
     data=new char[dataLength];
+
     fread(data,dataLength,1,f);
     fclose(f);
 }

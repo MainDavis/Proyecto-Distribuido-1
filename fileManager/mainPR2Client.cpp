@@ -23,15 +23,15 @@ int main(int argc,char** argv)
         }else if(strcmp(command, "download") == 0){
             cin >> filename;
             fm->readFile(filename);
-        }else if(strcmp(command, "exit") != 0){
+        }else{
             cout << command << ": orden no encontrada\n";
         }
+    
 
-    }while(strcmp(command, "exit") != 0);
+    }while(strcmp(command, "exit") == 0);
 
     delete command;
     delete filename;
-    delete fm;
 
     return 0;
 }
