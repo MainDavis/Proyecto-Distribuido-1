@@ -19,9 +19,7 @@ filemanager_imp::filemanager_imp(int clientID){
 }
 
 filemanager_imp::~filemanager_imp(){
-    cout << "1\n";
-    if(listaServer != nullptr)
-        ops->freeListedFiles(listaServer);
+        
 	delete ops;
 	closeConnection(clientID);
 	//cierre estados, etc...
@@ -58,6 +56,8 @@ void filemanager_imp::exec(){
 
                 for(unsigned int i=0; i<listaServer->size(); i++)
                     sendMSG(clientID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1);
+                
+                ops->freeListedFiles(listaServer);
 
              }
                 break;
@@ -93,13 +93,11 @@ void filemanager_imp::exec(){
 
                 //RECIBIR DATOS FICHERO 
 				recvMSG(clientID, (void**)&datosEscritos, &dataLen);
-                
+
                 fileSize = dataLen;
 
                 ops->writeFile(fileName, datosEscritos, fileSize);
 
-				//borrar memoria
-                ops->freeListedFiles(listaServer);
 				delete fileName;
 				delete datosEscritos;
          

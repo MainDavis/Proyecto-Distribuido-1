@@ -59,7 +59,6 @@ vector<string*>* filemanager_stub::listFiles(){
         recvMSG(serverID,(void**)&fileName, &dataLen);
         vFileName->push_back(new string(fileName));
     }
-    cout << "\n";
 
     delete len;
     delete fileName;
@@ -69,13 +68,11 @@ vector<string*>* filemanager_stub::listFiles(){
 
 void filemanager_stub::readFile(char* fileName){ //DOWNLOAD
 
-    /* char msg = READFILE;
+    char msg = READFILE;
     sendMSG(serverID, (void*)&msg, sizeof(char));
 
     int dataLen = 0;
     char* data = nullptr;
-    
-    ops = new FileManager(this->path);
 
     //Envio el nombre del fichero a descargar
     sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
@@ -83,30 +80,45 @@ void filemanager_stub::readFile(char* fileName){ //DOWNLOAD
     //Recibo el fichero
     recvMSG(serverID, (void**)&data, &dataLen);
     
-    ops->writeFile(fileName, data, dataLen); */
+    string path=this->path+"/"+string(fileName);
+    FILE* f=fopen(path.c_str(),"w");
+    fwrite(data,dataLen,1,f);
+    fclose(f);
 
 }
 
-void filemanager_stub::writeFile(char* fileName){ //UPLOAD
+void filemanager_stub::writeFile(char* fileName, vector<string*>* vListFiles){ //UPLOAD
 
-    /* char msg = WRITEFILE;
-    sendMSG(serverID, (void*)&msg, sizeof(char));
-
+    //Leo el fichero
     unsigned long fileSize = 0;
     char* datosLeidos = nullptr;
+    string path=this->path+"/"+string(fileName);
+    FILE* f=fopen(path.c_str(),"r");
 
-    //Envio el nombre del fichero
-    sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
+    //Si el fichero existe continuo
+    if(f != NULL){
+        fseek(f, 0L, SEEK_END);
+        fileSize= ftell(f);
+        fseek(f, 0L, SEEK_SET);
+        datosLeidos=new char[fileSize];
+        fread(datosLeidos,fileSize,1,f);
+        fclose(f);
 
-    ops = new FileManager(this->path);
+        char msg = WRITEFILE;
+        sendMSG(serverID, (void*)&msg, sizeof(char));
 
-    //Leo los datos del archivo
-    ops->readFile(fileName, datosLeidos, fileSize);
+        //Envio el nombre del fichero
+        sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
+
+        //Envio los datos del fichero
+        sendMSG(serverID, (void**)datosLeidos, fileSize);
     
-    //Envio los datos del fichero
-    sendMSG(serverID, (void**)datosLeidos, fileSize);
-
-    delete ops;
-    delete datosLeidos; */
-
+        //Añado el nombre del fichero al vector
+        vListFiles->push_back(new string(fileName));
+        
+    }else{
+        cout << "ERROR: No existe el fichero\n";
+    }
+    
+    delete datosLeidos;
 }

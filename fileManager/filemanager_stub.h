@@ -27,5 +27,5 @@ public:
     ~filemanager_stub();
     vector<string*>* listFiles();
     void readFile(char* fileName);
-    void writeFile(char* fileName);
+    void writeFile(char* fileName, vector<string*>* vListFiles);
 };

@@ -16,8 +16,11 @@ int main(int argc,char** argv)
 
     do{
         cin >> command;
+
         if(strcmp(command, "ls") == 0){
+
             vListFiles = fm->listFiles();
+
             for(string* i : *vListFiles)
                 cout << *i << "\t";
             cout << "\n";
@@ -25,22 +28,25 @@ int main(int argc,char** argv)
         }else if(strcmp(command, "upload") == 0){
 
             cin >> filename;
-
-            //Si el fichero existe
-            for(string* i : *vListFiles){
-                if(strcmp(i->c_str(), filename) == 0){
-                    cout << "Existe el fichero: " << *vListFiles->back() << "\n";    
-                    //fm->writeFile(filename);
-                }else if(strcmp(i->c_str(), *vListFiles->back()->c_str() ) == 0){
-
-                }
-            }
-
-            cout << "No existe el fichero\n";
+            fm->writeFile(filename,vListFiles);
 
         }else if(strcmp(command, "download") == 0){
+            
             cin >> filename;
-            fm->readFile(filename);
+
+            //Miro si existe el fichero
+            bool existe = false;
+
+            for(int i=0; i<vListFiles->size() && !existe; i++)
+                if( strcmp(vListFiles->at(i)->c_str(), filename) == 0)
+                    existe = true;
+                
+            if(existe){
+                fm->readFile(filename);
+            }else{
+                cout << "ERROR: No existe el fichero\n";
+            }
+
         }else if(strcmp(command, "exit") != 0){
             cout << command << ": orden no encontrada\n";
         }
