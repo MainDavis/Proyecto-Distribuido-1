@@ -50,7 +50,7 @@ void filemanager_imp::exec(){
             switch (tipo_op){
                 
             case LISTFILES:{
-                
+
                 listaServer = ops->listFiles();
                 int len = listaServer->size();
 

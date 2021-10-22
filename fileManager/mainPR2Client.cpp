@@ -6,6 +6,7 @@ int main(int argc,char** argv)
     filemanager_stub *fm=new filemanager_stub();
     char* command = new char[25];
     char* filename = new char[25];
+    vector<string*>* vListFiles =  fm->listFiles();
 
     /*
     LS -> listFiles
@@ -16,9 +17,20 @@ int main(int argc,char** argv)
     do{
         cin >> command;
         if(strcmp(command, "ls") == 0){
-            fm->listFiles();
+            vListFiles = fm->listFiles();
+            for(string* i : *vListFiles)
+                cout << *i << "\t";
+            cout << "\n";
+
         }else if(strcmp(command, "upload") == 0){
+
             cin >> filename;
+
+            //Si el fichero existe
+            for(string* i : *vListFiles){
+                
+            }
+
             fm->writeFile(filename);
         }else if(strcmp(command, "download") == 0){
             cin >> filename;

@@ -41,15 +41,15 @@ filemanager_stub::~filemanager_stub(){
 
 }
 
-std::vector<std::string*>* filemanager_stub::listFiles(){
+vector<string*>* filemanager_stub::listFiles(){
 
     char msg = 'L';
     sendMSG(serverID, (void*)&msg, sizeof(char));
 
     int dataLen = 0;
     int* len=0;
-    string* fileName = nullptr;
-    vector<string*>* vFileName = nullptr;
+    char* fileName = nullptr;
+    vector<string*>* vFileName = new vector<string*>;
  
     //Recibo el numero de ficheros que hay
     recvMSG(serverID,(void**)&len,&dataLen);
@@ -57,10 +57,12 @@ std::vector<std::string*>* filemanager_stub::listFiles(){
     //Recibo los nombres de los ficheros
     for (unsigned int i = 0; i < *len; i++){
         recvMSG(serverID,(void**)&fileName, &dataLen);
-        cout << fileName << "\t";
-        vFileName->push_back(fileName);
+        vFileName->push_back(new string(fileName));
     }
     cout << "\n";
+
+    delete len;
+    delete fileName;
 
     return vFileName;
 }
