@@ -20,6 +20,7 @@ class filemanager_stub
 private:
     
     int serverID = 0;
+    vector<string*> *listaServer = nullptr;
     std::string path = "./dirpruebaCliente/";
 
 public:
