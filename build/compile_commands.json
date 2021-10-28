@@ -41,18 +41,23 @@
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/multMatrixClient.dir/multMatrix/manejoMatriz.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/manejoMatriz.cpp",
-  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrix/manejoMatriz.cpp"
-},
-{
-  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
   "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager.cpp"
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerServer.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp",
-  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp"
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/utils.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/utils.cpp"
 },
 {
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
@@ -63,5 +68,20 @@
   "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
   "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp",
   "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/main_fm.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp"
+},
+{
+  "directory": "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10   -g -std=gnu++11 -o CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o -c /home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/utils.cpp",
+  "file": "/home/davis/Escritorio/PSDI-PRACTICA-1/fileManager/utils.cpp"
 }
 ]

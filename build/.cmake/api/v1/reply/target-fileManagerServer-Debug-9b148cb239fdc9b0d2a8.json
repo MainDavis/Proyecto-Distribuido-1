@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/davis/Escritorio/PSDI-PRACTICA-1/multMatrixServer"
+			"path" : "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManagerServer"
 		}
 	],
 	"backtrace" : 1,
@@ -10,8 +10,7 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
-			"target_link_libraries"
+			"add_executable"
 		],
 		"files" : 
 		[
@@ -25,13 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 25,
+				"line" : 14,
 				"parent" : 0
 			}
 		]
@@ -42,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g  "
 				},
 				{
 					"fragment" : "-std=gnu++11"
@@ -54,11 +47,11 @@
 				0,
 				2,
 				3,
-				5
+				4
 			]
 		}
 	],
-	"id" : "multMatrixServer::@6890427a1f51a3e7e1df",
+	"id" : "fileManagerServer::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -72,15 +65,14 @@
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 2,
 				"fragment" : "-lpthread",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "multMatrixServer",
-	"nameOnDisk" : "multMatrixServer",
+	"name" : "fileManagerServer",
+	"nameOnDisk" : "fileManagerServer",
 	"paths" : 
 	{
 		"build" : ".",
@@ -95,7 +87,7 @@
 				0,
 				2,
 				3,
-				5
+				4
 			]
 		},
 		{
@@ -103,8 +95,7 @@
 			"sourceIndexes" : 
 			[
 				1,
-				4,
-				6
+				5
 			]
 		}
 	],
@@ -113,40 +104,35 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "multMatrix/multmatrix.cpp",
+			"path" : "fileManager/filemanager.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "multMatrix/multmatrix.h",
+			"path" : "fileManager/filemanager.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "multMatrix/mainPR1Server.cpp",
+			"path" : "fileManager/mainPR2Server.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "multMatrix/multmatrix_imp.cpp",
+			"path" : "fileManager/filemanager_imp.cpp",
 			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "multMatrix/multmatrix_imp.h",
-			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "multMatrix/utils.cpp",
+			"path" : "fileManager/utils.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "multMatrix/utils.h",
+			"path" : "fileManager/utils.h",
 			"sourceGroupIndex" : 1
 		}
 	],

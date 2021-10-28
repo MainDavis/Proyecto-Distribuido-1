@@ -1,22 +1,25 @@
 #include "filemanager_imp.h"
+#include "filemanager.h"
 
 #define LISTFILES	    'L'
 #define READFILE 	 	'R'
 #define WRITEFILE 	    'M'
+#define FREEFICH 	    'F'
+
 
 #define OP_EXIT			'E'
 #define OP_OK			'O'
 
-multmatrix_imp::multmatrix_imp(int clientID){
-
-	ops=new FileManager();
+filemanager_imp::filemanager_imp(int clientID){
+	ops=new FileManager(this->path);
 	//inicializar estados, extra... 
 	salir=false;
 	this->clientID=clientID;
 
 }
-multmatrix_imp::~multmatrix_imp(){
 
+filemanager_imp::~filemanager_imp(){
+        
 	delete ops;
 	closeConnection(clientID);
 	//cierre estados, etc...
@@ -46,29 +49,60 @@ void filemanager_imp::exec(){
                 
             case LISTFILES:{
 
+                listaServer = ops->listFiles();
+                int len = listaServer->size();
 
-                /* code */
+                sendMSG(clientID,(void*)&len,sizeof(int));
 
+                for(unsigned int i=0; i<listaServer->size(); i++)
+                    sendMSG(clientID,listaServer->at(i)->c_str(), strlen(listaServer->at(i)->c_str())+1);
+                
+                ops->freeListedFiles(listaServer);
 
              }
                 break;
             
-            case READFILE:{
+            case READFILE:{ //DOWNLOAD
 
+                char* fileName=nullptr;
+				unsigned long fileSize=0;
+				char* datosLeidos=nullptr;
+				//recibir datos
+				recvMSG(clientID,(void**)&fileName,&dataLen);
 
+                ops->readFile(fileName, datosLeidos, fileSize);
                 
-                /* code */
+                //devolver resultado
+				sendMSG(clientID,(void*)datosLeidos,fileSize);
+                
+				//borrar memoria
+				delete fileName;
+				delete datosLeidos;
+
              }
                 break;
             
-            case WRITEFILE:{
+            case WRITEFILE:{ //UPLOAD
 
+                char* fileName=nullptr;
+				unsigned long fileSize=0;
+				char* datosEscritos=nullptr;
 
-                
-                /* code */
+                //RECIBIR NOMBRE FICHERO 
+				recvMSG(clientID, (void**)&fileName, &dataLen);
+
+                //RECIBIR DATOS FICHERO 
+				recvMSG(clientID, (void**)&datosEscritos, &dataLen);
+
+                fileSize = dataLen;
+
+                ops->writeFile(fileName, datosEscritos, fileSize);
+
+				delete fileName;
+				delete datosEscritos;
+         
              }
                 break;
-
 
             case OP_EXIT: {
                     salir=true;

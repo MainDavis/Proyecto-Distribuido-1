@@ -1,8 +1,6 @@
 #pragma once
 //linka con el server, reproduce la clase base
 
-#include "multmatrix.h"
-
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,6 +8,15 @@
 
 #define IP_SERVER "127.0.0.1"
 #define PORT_SERVER  3301
+
+typedef struct matrix_t
+{
+    int rows;
+    int cols;
+    int* data;
+    
+}matrix_t;
+
 
 class multmatrix_stub
 {

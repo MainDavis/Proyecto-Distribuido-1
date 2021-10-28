@@ -1,1 +1,1 @@
-/bin/x86_64-linux-gnu-g++-10 -g -rdynamic CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o -o ../fileManagerClient  -lpthread 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o  -o ../fileManagerClient  -lpthread 

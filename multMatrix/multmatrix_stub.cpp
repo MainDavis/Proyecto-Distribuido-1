@@ -46,39 +46,30 @@ multmatrix_stub::~multmatrix_stub(){
 /////
 /////
 matrix_t* multmatrix_stub::readMatrix(const char* file){
-    
-    matrix_t* result = new matrix_t;
-    char msg = LEER_MATRIX;
-    int dataLen = 0;
-    int *exito = nullptr, *buff = nullptr;
-    
-    //Enviamos la operación al server 
-    sendMSG(serverID, (void*)&msg, sizeof(char));
-    //Enviamos el nombre del fichero
-    sendMSG(serverID, (void**)file, strlen(file)+1);
 
-    //Recibimos si ha tenido exito
-    recvMSG(serverID, (void**)&exito, &dataLen);
-    if(*exito == 1){
+    FILE* f=fopen(file,"r");
 
-        //Recibimos las columnas
-        recvMSG(serverID, (void**)&buff, &dataLen);
-        memcpy(&result->cols, buff, sizeof(int));
-
-        //Recibimos las filas
-        recvMSG(serverID, (void**)&buff, &dataLen);
-        memcpy(&result->rows, buff, sizeof(int));
-
-        //Recibimos los datos
-        recvMSG(serverID, (void**)&buff, &dataLen);
-        result->data = buff;
-        
-        return result;
-    }else{
+    if(f==0){
         std::cout<< "ERROR: Fichero " << std::string(file) <<" no existe\n";
         return NULL;
     }
-    
+
+    matrix_t* matrix=new matrix_t[1];
+
+    fscanf(f,"%d %d",&matrix->rows,&matrix->cols);
+
+    std::cout<<"\n\tLeidos fila y columna: "<<matrix->rows<<" "<<matrix->cols<<"\n";
+
+    matrix->data=new int[matrix->rows*matrix->cols];
+
+    for(int i=0;i<matrix->rows*matrix->cols;i++){
+        fscanf(f,"%d",&matrix->data[i]);
+    }
+
+    fclose(f);
+
+    return matrix;
+
 }
 /////
 /////
@@ -134,21 +125,16 @@ matrix_t* multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
 /////
 /////
 void multmatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
-    char msg = ESCRIBIR_MATRIX;
-    int dataLen = 0;
-    int* buff = nullptr;
+    
+    FILE* f=fopen(fileName,"w");
 
-    //Enviamos la operación al server 
-    sendMSG(serverID, (void*)&msg, sizeof(char));
+    fprintf(f,"%d %d\n",m->rows,m->cols);
 
-    //Enviamos el nombre del fichero
-    sendMSG(serverID, (void**)fileName, strlen(fileName)+1);
-    //Enviamos las columnas
-    sendMSG(serverID,(void*)&m->cols,sizeof(int));
-    //Enviamos las filas
-    sendMSG(serverID,(void*)&m->rows,sizeof(int));
-    //Enviamos los datos
-    sendMSG(serverID,(void*)m->data, sizeof(int)*m->cols*m->rows);
+    for(int i=0;i<m->rows*m->cols;i++){
+        fprintf(f,"%d\n",m->data[i]);
+    }
+
+    fclose(f);
 
 }
 /////
