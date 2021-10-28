@@ -8,12 +8,10 @@
 #include <vector>
 
 #include "multmatrix_stub.h"
-#include "multmatrix.h"
 
 void freeMatrix(matrix_t* m){
     delete[] m->data;
     delete[] m;
-
 }
 int main()
 {

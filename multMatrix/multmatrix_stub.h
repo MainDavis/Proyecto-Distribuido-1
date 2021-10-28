@@ -1,8 +1,6 @@
 #pragma once
 //linka con el server, reproduce la clase base
 
-#include "multmatrix.h"
-
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,6 +14,7 @@ typedef struct matrix_t
     int rows;
     int cols;
     int* data;
+    
 }matrix_t;
 
 

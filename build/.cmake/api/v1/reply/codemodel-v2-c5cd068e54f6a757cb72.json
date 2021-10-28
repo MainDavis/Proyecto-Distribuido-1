@@ -44,28 +44,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "fileManagerClient::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fileManagerClient-Debug-5cb11c955a2d042e39e1.json",
+					"jsonFile" : "target-fileManagerClient-Debug-a71633f91924f5827603.json",
 					"name" : "fileManagerClient",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "fileManagerServer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fileManagerServer-Debug-5d1925dc9cb9a23fa8fc.json",
+					"jsonFile" : "target-fileManagerServer-Debug-9b148cb239fdc9b0d2a8.json",
 					"name" : "fileManagerServer",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "multMatrixClient::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-multMatrixClient-Debug-1e82a99fa0c561debd38.json",
+					"jsonFile" : "target-multMatrixClient-Debug-053c730ef3e481027973.json",
 					"name" : "multMatrixClient",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "multMatrixServer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-multMatrixServer-Debug-9d35506a41c838af3b76.json",
+					"jsonFile" : "target-multMatrixServer-Debug-c9c0ba36dc52814ca593.json",
 					"name" : "multMatrixServer",
 					"projectIndex" : 0
 				}
@@ -75,12 +75,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/davis/Escritorio/PSDI-PRACTICA-1/build",
-		"source" : "/home/davis/Escritorio/PSDI-PRACTICA-1"
+		"build" : "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build",
+		"source" : "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 1
+		"minor" : 0
 	}
 }
