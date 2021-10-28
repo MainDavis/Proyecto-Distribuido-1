@@ -1,5 +1,7 @@
 #include <iostream>
 #include "filemanager_stub.h"
+#include "filemanager.h"
+
 
 int main(int argc,char** argv)
 {
@@ -7,6 +9,8 @@ int main(int argc,char** argv)
     char* command = new char[25];
     char* filename = new char[25];
     vector<string*>* vListFiles =  fm->listFiles();
+    FileManager* ops = nullptr;
+
 
     /*
     LS -> listFiles
@@ -52,6 +56,8 @@ int main(int argc,char** argv)
         }
 
     }while(strcmp(command, "exit") != 0);
+
+    ops->freeListedFiles(vListFiles);
 
     delete command;
     delete filename;

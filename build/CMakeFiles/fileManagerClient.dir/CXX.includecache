@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp
-filemanager.h
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.h
-
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.h
+/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.h
 iostream
 -
 stdio.h
@@ -26,11 +22,7 @@ vector
 dirent.h
 -
 
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp
-filemanager_stub.h
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.h
-
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.h
+/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.h
 iostream
 -
 stdio.h
@@ -46,21 +38,17 @@ string
 algorithm
 -
 utils.h
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.h
+/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/utils.h
 
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp
+/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp
 iostream
 -
 filemanager_stub.h
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.h
+/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.h
+filemanager.h
+/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.h
 
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp
-
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp
-utils.h
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.h
-
-/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.h
+/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/utils.h
 sys/types.h
 -
 sys/socket.h
