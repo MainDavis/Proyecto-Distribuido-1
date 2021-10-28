@@ -1,6 +1,5 @@
 #include <iostream>
 #include "filemanager_stub.h"
-#include "filemanager.h"
 
 
 int main(int argc,char** argv)
@@ -9,9 +8,6 @@ int main(int argc,char** argv)
     char* command = new char[25];
     char* filename = new char[25];
     vector<string*>* vListFiles =  fm->listFiles();
-    FileManager* ops = nullptr;
-
-
     /*
     LS -> listFiles
     READFILE -> Download
@@ -57,7 +53,12 @@ int main(int argc,char** argv)
 
     }while(strcmp(command, "exit") != 0);
 
-    ops->freeListedFiles(vListFiles);
+    //ops->freeListedFiles(vListFiles);
+    for(vector<string*>::iterator i=vListFiles->begin();i!= vListFiles->end();++i)
+    {
+        delete *i;
+    }
+    delete vListFiles;
 
     delete command;
     delete filename;

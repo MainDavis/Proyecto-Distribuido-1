@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp" "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o"
-  "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp" "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o"
-  "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp" "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o"
-  "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp" "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o"
-  "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp" "/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o"
+  "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp" "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o"
+  "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp" "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o"
+  "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp" "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o"
+  "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp" "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o"
+  "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp" "/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

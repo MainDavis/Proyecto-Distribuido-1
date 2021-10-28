@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/mainPR1Server.cpp
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/mainPR1Server.cpp
 multmatrix_imp.h
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.h
 iostream
 -
 stdlib.h
@@ -18,13 +18,13 @@ stdio.h
 thread
 -
 utils.h
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/utils.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/utils.h
 
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.cpp
 multmatrix.h
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 multmatrix.h
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 stdio.h
 -
 stdlib.h
@@ -40,13 +40,13 @@ sys/types.h
 unistd.h
 -
 
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.cpp
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.cpp
 multmatrix_imp.h
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.h
 
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix_imp.h
 iostream
 -
 stdio.h
@@ -54,15 +54,15 @@ stdio.h
 stdlib.h
 -
 utils.h
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/utils.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/utils.h
 multmatrix.h
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/multmatrix.h
 
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/utils.cpp
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/utils.cpp
 utils.h
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/utils.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/utils.h
 
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/multMatrix/utils.h
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/multMatrix/utils.h
 sys/types.h
 -
 sys/socket.h

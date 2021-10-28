@@ -1,6 +1,6 @@
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/rebuild_cache.dir
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/multMatrixServer.dir
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/multMatrixClient.dir
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerServer.dir
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/edit_cache.dir
-/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/rebuild_cache.dir
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/multMatrixServer.dir
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/multMatrixClient.dir
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerServer.dir
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/edit_cache.dir
+/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerClient.dir

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1
+CMAKE_SOURCE_DIR = /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build
+CMAKE_BINARY_DIR = /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fileManagerServer.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/fileManagerServer.dir/flags.make
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o: CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o: ../fileManager/filemanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o -c /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp > CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp > CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s
 
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o: CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o: ../fileManager/mainPR2Server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o -c /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp
 
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp > CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp > CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i
 
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o: CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o: ../fileManager/filemanager_imp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o -c /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp > CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp > CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s
 
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o: CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o: ../fileManager/utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o -c /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp
 
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp > CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp > CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i
 
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s
 
 # Object files for target fileManagerServer
 fileManagerServer_OBJECTS = \
@@ -125,7 +125,7 @@ fileManagerServer_EXTERNAL_OBJECTS =
 ../fileManagerServer: CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o
 ../fileManagerServer: CMakeFiles/fileManagerServer.dir/build.make
 ../fileManagerServer: CMakeFiles/fileManagerServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../fileManagerServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../fileManagerServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fileManagerServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/fileManagerServer.dir/clean:
 .PHONY : CMakeFiles/fileManagerServer.dir/clean
 
 CMakeFiles/fileManagerServer.dir/depend:
-	cd /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1 /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1 /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build /home/hugo/Documentos/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerServer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1 /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1 /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles/fileManagerServer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fileManagerServer.dir/depend
 
