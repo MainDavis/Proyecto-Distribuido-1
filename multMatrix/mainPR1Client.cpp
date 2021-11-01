@@ -169,11 +169,15 @@ int main()
                         std::cout << "\nResultado:";
                         std::cout << "\n\n\tFilas: " << result->rows;
                         std::cout << "\n\tColumnas: " << result->cols << "\n";
+                        
                         for(int i = 0; i < result->rows * result->cols; i++)
                             std::cout << "\n\tDato [" << i+1 << "]: " << result->data[i];
+                        
+                        arrMatrix.push_back(*result);
+
+                        delete result;
                     }
 
-                    delete result;
                 }
                 
             }

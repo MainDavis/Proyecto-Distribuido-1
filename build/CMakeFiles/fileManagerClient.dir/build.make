@@ -60,67 +60,67 @@ include CMakeFiles/fileManagerClient.dir/flags.make
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o: CMakeFiles/fileManagerClient.dir/flags.make
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o: ../fileManager/filemanager.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp
 
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp > CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp > CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.i
 
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager.cpp.s
 
 CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o: CMakeFiles/fileManagerClient.dir/flags.make
 CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o: ../fileManager/main_fm.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp
 
 CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp > CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp > CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.i
 
 CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/main_fm.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/main_fm.cpp.s
 
 CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o: CMakeFiles/fileManagerClient.dir/flags.make
 CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o: ../fileManager/mainPR2Client.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp
 
 CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp > CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp > CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.i
 
 CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Client.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/mainPR2Client.cpp.s
 
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o: CMakeFiles/fileManagerClient.dir/flags.make
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o: ../fileManager/filemanager_stub.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp
 
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp > CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp > CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.i
 
 CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_stub.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/filemanager_stub.cpp.s
 
 CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o: CMakeFiles/fileManagerClient.dir/flags.make
 CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o: ../fileManager/utils.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp
 
 CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp > CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp > CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.i
 
 CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp -o CMakeFiles/fileManagerClient.dir/fileManager/utils.cpp.s
 
 # Object files for target fileManagerClient
 fileManagerClient_OBJECTS = \

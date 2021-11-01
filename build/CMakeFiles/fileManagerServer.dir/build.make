@@ -60,54 +60,54 @@ include CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o: CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o: ../fileManager/filemanager.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp > CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp > CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.i
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager.cpp.s
 
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o: CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o: ../fileManager/mainPR2Server.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp
 
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp > CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp > CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.i
 
 CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/mainPR2Server.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/mainPR2Server.cpp.s
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o: CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o: ../fileManager/filemanager_imp.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp > CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp > CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.i
 
 CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/filemanager_imp.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/filemanager_imp.cpp.s
 
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o: CMakeFiles/fileManagerServer.dir/flags.make
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o: ../fileManager/utils.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.o -c /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp
 
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp > CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp > CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.i
 
 CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davis/Escritorio/GitHub/PSDI-PRACTICA-1/fileManager/utils.cpp -o CMakeFiles/fileManagerServer.dir/fileManager/utils.cpp.s
 
 # Object files for target fileManagerServer
 fileManagerServer_OBJECTS = \
