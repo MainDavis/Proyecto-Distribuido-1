@@ -94,33 +94,60 @@ int main()
                 break;
 
             case 2: {
+                std::cout << "\nDesea leer en el cliente o en el servidor:\n\n";
+                std::cout << "\t1. Cliente\n";
+                std::cout << "\t2. Servidor\n\n";
+                std::cout << "\tOpcion: ";
+                std::cin >> op;
+
+                if(op == 1 || op == 2){
+                    
+                    std::cout << "\nInserte el nombre del fichero: ";
+                    std::cin >> fileName;
+
+                    matrix_t* temp = (op == 1) ? opMatrix->readMatrixClient(fileName) : opMatrix->readMatrixServer(fileName);
+
+                    if(temp != NULL)
+                        arrMatrix.push_back( *temp );     
+
+                    delete temp;         
+
+                }else{
+                    std::cout << "\nNo se ha metido una opcion valida\n";
+                }
+
                 
-                std::cout << "\nInserte el nombre del fichero: ";
-                std::cin >> fileName;
-
-                matrix_t* temp = opMatrix->readMatrix(fileName);
-
-                if(temp != NULL)
-                    arrMatrix.push_back( *temp );      
-
-                delete temp;         
 
             }
                 break;
 
             case 3: {
 
-                std::cout << "\nInserte el ID y el nombre del fichero que desea:\n\n";
-                std::cout << "\tID: ";
-                std::cin >> id;
-                std::cout << "\tNombre del fichero: ";
-                std::cin >> fileName;
+                std::cout << "\nDeseas guardar en el cliente o en el servidor:\n\n";
+                std::cout << "\t1. Cliente\n";
+                std::cout << "\t2. Servidor\n\n";
+                std::cout << "\tOpcion: ";
+                std::cin >> op;
+
+                if(op == 1 || op == 2){
+                    
+                    std::cout << "\nInserte el ID y el nombre del fichero que desea:\n\n";
+                    std::cout << "\tID: ";
+                    std::cin >> id;
+                    std::cout << "\tNombre del fichero: ";
+                    std::cin >> fileName;
+                    
+                    if(id < 1 || id > arrMatrix.size()){
+                        std::cout << "\nNo existe ese ID";
+                    }else{
+                        (op == 1) ? opMatrix->writeMatrixClient(&arrMatrix.at(id-1), fileName) : opMatrix->writeMatrixServer(&arrMatrix.at(id-1), fileName);
+                    }
                 
-                if(id < 1 || id > arrMatrix.size()){
-                    std::cout << "\nNo existe ese ID";
                 }else{
-                    opMatrix->writeMatrix(&arrMatrix.at(id-1), fileName);
+                    std::cout << "\nNo se ha metido una opcion valida\n";
                 }
+
+                
 
             }
                 break;

@@ -3,6 +3,8 @@
 #define MULT_MATRIX 	        'M'
 #define CREATE_IDENTITY  	    'C'
 #define CREATE_RANDOM           'A'
+#define READ_MATRIX             'R'
+#define WRITE_MATRIX            'W'
 
 #define OP_EXIT			'E'
 #define OP_OK			'O'
@@ -92,8 +94,6 @@ void multmatrix_imp::exec(){
                         sendMSG(clientID,(void*)buff, sizeof(int));
                     }
 
-                    
-
                     }
                     break;
 
@@ -133,6 +133,64 @@ void multmatrix_imp::exec(){
                     }
                     break;
             
+                case WRITE_MATRIX: {
+                    
+                    int *buff = nullptr;
+                    char *fileName = nullptr;                
+                    matrix_t* m = new matrix_t;
+                    
+                    //Recibimos el nombre del archivo
+                    recvMSG(clientID, (void**)&fileName, &dataLen);
+                    //Recibimos las columnas
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    memcpy(&m->cols, buff, sizeof(int));
+                    //Recibimos las filas
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    memcpy(&m->rows, buff, sizeof(int));
+                    //Recibimos los datos
+                    recvMSG(clientID, (void**)&buff, &dataLen);
+                    m->data = buff;
+
+                    ops->writeMatrix(m, fileName);
+                    
+                    }
+                    break;
+
+                case READ_MATRIX: {
+                    
+                    int *buff=new int;
+                    char *data=nullptr;
+
+                    matrix_t* m = new matrix_t;
+
+                    //Recibimos el nombre del archivo
+                    recvMSG(clientID, (void**)&data, &dataLen);
+
+                    m = ops->readMatrix(data);
+
+                    if(m != NULL){
+                        //Enviamos el mensaje de que ha tenido éxito
+                        *buff = 1;
+                        sendMSG(clientID,(void*)buff, sizeof(int));
+
+                        //Enviamos los datos de la matriz
+                        //Enviamos las columnas
+                        sendMSG(clientID,(void*)&m->cols,sizeof(int));
+
+                        //Enviamos las filas
+                        sendMSG(clientID,(void*)&m->rows,sizeof(int));
+
+                        //Enviamos los datos
+                        sendMSG(clientID,(void*)m->data, sizeof(int)*m->cols*m->rows);
+
+                    }else{
+                        //Enviamos el mensaje de que no ha tenido éxito
+                        *buff = 0;
+                        sendMSG(clientID,(void*)buff, sizeof(int));
+                    }
+                    break;
+                    }
+
                 case OP_EXIT: {
 				    	salir=true;
 				    	char opOK=OP_OK;

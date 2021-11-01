@@ -5,6 +5,8 @@
 #define MULT_MATRIX 	        'M'
 #define CREATE_IDENTITY  	    'C'
 #define CREATE_RANDOM  	        'A'
+#define READ_MATRIX             'R'
+#define WRITE_MATRIX            'W'
 
 #define OP_EXIT			'E'
 #define OP_OK			'O'
@@ -45,7 +47,7 @@ multmatrix_stub::~multmatrix_stub(){
 }
 /////
 /////
-matrix_t* multmatrix_stub::readMatrix(const char* file){
+matrix_t* multmatrix_stub::readMatrixClient(const char* file){
 
     FILE* f=fopen(file,"r");
 
@@ -69,6 +71,43 @@ matrix_t* multmatrix_stub::readMatrix(const char* file){
     fclose(f);
 
     return matrix;
+
+}
+
+matrix_t* multmatrix_stub::readMatrixServer(const char* file){
+
+    char msg = READ_MATRIX;
+    matrix_t* result = new matrix_t;
+    int dataLen = 0;
+    int *buff = nullptr;
+
+    //Enviamos la operación al server
+    sendMSG(serverID, (void*)&msg, sizeof(char));
+
+    //Envio el nombre del fichero a descargar
+    sendMSG(serverID, (void**)file, strlen(file)+1);
+
+    //Miramos si se ha podido leer
+    recvMSG(serverID, (void**)&buff, &dataLen);
+
+    if(*buff == 1){
+        //Recibimos los datos de la matriz resultado
+        recvMSG(serverID, (void**)&buff, &dataLen);
+        memcpy(&result->cols, buff, sizeof(int));
+        //Recibimos las filas
+        recvMSG(serverID, (void**)&buff, &dataLen);
+        memcpy(&result->rows, buff, sizeof(int));
+        //Recibimos los datos
+        recvMSG(serverID, (void**)&buff, &dataLen);
+        result->data = buff;
+
+        //delete buff;
+        return result;
+
+    }else{
+        //delete buff;
+        return NULL;
+    }
 
 }
 /////
@@ -124,7 +163,7 @@ matrix_t* multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
 }
 /////
 /////
-void multmatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
+void multmatrix_stub::writeMatrixClient(matrix_t* m, const char *fileName){
     
     FILE* f=fopen(fileName,"w");
 
@@ -135,6 +174,24 @@ void multmatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
     }
 
     fclose(f);
+
+}
+
+void multmatrix_stub::writeMatrixServer(matrix_t* m, const char *fileName){
+    
+    char msg = WRITE_MATRIX;
+
+    //Enviamos la operación al server
+    sendMSG(serverID, (void*)&msg, sizeof(char));
+
+    //Enviamos el nombre
+    sendMSG(serverID, (void*)fileName, strlen(fileName)+1);
+    //Enviamos las columnas
+    sendMSG(serverID,(void*)&m->cols,sizeof(int));
+    //Enviamos las filas
+    sendMSG(serverID,(void*)&m->rows,sizeof(int));
+    //Enviamos los datos
+    sendMSG(serverID,(void*)m->data, sizeof(int)*m->cols*m->rows);
 
 }
 /////
