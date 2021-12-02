@@ -7,7 +7,7 @@
 #include "utils.h"
 
 #define IP_SERVER "127.0.0.1"
-#define PORT_SERVER  3301
+#define PORT_SERVER  32002
 
 typedef struct matrix_t
 {

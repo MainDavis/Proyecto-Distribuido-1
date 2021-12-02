@@ -12,8 +12,8 @@
 
 using namespace std;
 
-#define IP_SERVER "127.0.0.1"
-#define PORT_SERVER  3301
+#define IP_SERVER "192.168.167.71"
+#define PORT_SERVER  32001
 
 class filemanager_stub
 {

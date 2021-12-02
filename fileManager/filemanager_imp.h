@@ -15,7 +15,7 @@ private:
 	vector<string*> *listaServer = nullptr;
 	bool salir=false;
 	int clientID=0;
-	string path = "./dirpruebaServidor/";
+	string path = "./dirServer/";
 public:
 	filemanager_imp(int clientID);
 	~filemanager_imp();
