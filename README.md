@@ -1,3 +1,6 @@
-# PSDI-PRACTICA-1
+# Proyecto programación distribuida
 
-Primera práctica de Sistemas Distrubuidos
+En esta prática entran dos programas.
+
+* Multiplicador de matrices cliente/servidor.
+* File manager de un servidor
